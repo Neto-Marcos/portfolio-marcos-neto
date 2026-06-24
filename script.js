@@ -19,8 +19,6 @@ const projectDetails = {
   }
 };
 
-const sidebar = document.querySelector(".sidebar");
-const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll("[data-nav], .mobile-nav a");
 const sections = document.querySelectorAll("main section[id]");
 const reveals = document.querySelectorAll(".reveal");
@@ -30,10 +28,6 @@ const dialogText = document.querySelector("#dialogText");
 const dialogStatus = document.querySelector("#dialogStatus");
 const dialogStack = document.querySelector("#dialogStack");
 const closeDialog = document.querySelector(".dialog-close");
-
-menuToggle?.addEventListener("click", () => {
-  sidebar?.classList.toggle("open");
-});
 
 document.querySelectorAll("[data-detail]").forEach((button) => {
   button.addEventListener("click", () => {
@@ -83,7 +77,3 @@ const revealObserver = new IntersectionObserver(
 );
 
 reveals.forEach((item) => revealObserver.observe(item));
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") sidebar?.classList.remove("open");
-});
