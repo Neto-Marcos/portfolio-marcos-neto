@@ -43,9 +43,9 @@ npx serve .
 
 No arquivo `index.html`, altere:
 
-- `seu-email@exemplo.com`
-- link do LinkedIn
-- link do WhatsApp
+- `marcos.neto0706@gmail.com`
+- `https://www.linkedin.com/in/marcos-neto-bbab573b6/`
+- `https://wa.me/5583991744139`
 
 ## Autor
 

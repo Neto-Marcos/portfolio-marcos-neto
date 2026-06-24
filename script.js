@@ -68,7 +68,7 @@ dialog?.addEventListener("click", (event) => {
 });
 
 copyEmail?.addEventListener("click", async () => {
-  const email = "seu-email@exemplo.com";
+  const email = "marcos.neto0706@gmail.com";
   try {
     await navigator.clipboard.writeText(email);
     copyEmail.textContent = "Email copiado";
