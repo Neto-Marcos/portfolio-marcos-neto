@@ -99,7 +99,6 @@ img {
   backdrop-filter: blur(26px);
 }
 
-.brand,
 .side-nav a,
 .topbar,
 .panel-header,
@@ -108,24 +107,6 @@ img {
   align-items: center;
 }
 
-.brand {
-  gap: 13px;
-  margin-bottom: 28px;
-}
-
-.brand img {
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(139, 92, 246, 0.34);
-}
-
-.brand strong {
-  display: block;
-  font-size: 17px;
-}
-
-.brand small,
 .page-kicker,
 .eyebrow,
 .profile-card span,
