@@ -16,18 +16,6 @@ const projectDetails = {
     status: "Protótipo",
     text: "Ideia de sistema para registro de ponto, reconhecimento facial, cálculo de horas extras e apoio à folha de pagamento.",
     stack: ["Python", "IA", "Automação"]
-  },
-  transportadoras: {
-    title: "Dashboard de Transportadoras",
-    status: "Protótipo",
-    text: "Painel para visualizar mapas levados por transportadoras, últimas cargas, notas carregadas e status operacional.",
-    stack: ["HTML", "CSS", "JavaScript"]
-  },
-  prototipos: {
-    title: "Protótipos Web",
-    status: "Protótipo",
-    text: "Coleção de telas, dashboards e interfaces rápidas para validar ideias e apresentar conceitos.",
-    stack: ["HTML", "CSS", "JavaScript", "UX/UI"]
   }
 };
 
