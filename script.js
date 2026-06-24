@@ -21,8 +21,6 @@ const projectDetails = {
 
 const sidebar = document.querySelector(".sidebar");
 const menuToggle = document.querySelector(".menu-toggle");
-const filterButtons = document.querySelectorAll("[data-filter]");
-const projectCards = document.querySelectorAll(".project-card");
 const navLinks = document.querySelectorAll("[data-nav], .mobile-nav a");
 const sections = document.querySelectorAll("main section[id]");
 const reveals = document.querySelectorAll(".reveal");
@@ -35,17 +33,6 @@ const closeDialog = document.querySelector(".dialog-close");
 
 menuToggle?.addEventListener("click", () => {
   sidebar?.classList.toggle("open");
-});
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    filterButtons.forEach((item) => item.classList.toggle("active", item === button));
-    projectCards.forEach((card) => {
-      const categories = card.dataset.category || "";
-      card.hidden = filter !== "all" && !categories.includes(filter);
-    });
-  });
 });
 
 document.querySelectorAll("[data-detail]").forEach((button) => {

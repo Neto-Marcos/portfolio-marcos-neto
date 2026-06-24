@@ -196,7 +196,6 @@ img {
 
 .top-link,
 .button,
-.filters button,
 .project-card button,
 .contact-card button,
 .contact-card a {
@@ -306,7 +305,6 @@ p {
 
 .button:hover,
 .top-link:hover,
-.filters button:hover,
 .project-card button:hover,
 .contact-card a:hover,
 .contact-card button:hover {
@@ -492,23 +490,6 @@ p {
   gap: 18px;
   align-items: end;
   margin-bottom: 22px;
-}
-
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-end;
-}
-
-.filters button {
-  min-height: 40px;
-  padding: 0 13px;
-}
-
-.filters button.active {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(168, 85, 247, 0.52));
-  border-color: transparent;
 }
 
 .project-grid {
@@ -754,11 +735,6 @@ dialog::backdrop {
 
   .section-top {
     display: block;
-  }
-
-  .filters {
-    justify-content: flex-start;
-    margin-top: 14px;
   }
 
   .project-grid,
