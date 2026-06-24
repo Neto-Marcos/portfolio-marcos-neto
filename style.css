@@ -250,6 +250,33 @@ p {
   margin-top: 28px;
 }
 
+.hero-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.hero-contact a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  transition: 180ms ease;
+}
+
+.hero-contact a:hover {
+  color: var(--text);
+  border-color: rgba(139, 92, 246, 0.48);
+  transform: translateY(-2px);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -728,6 +755,11 @@ dialog::backdrop {
 
   .hero-actions .button {
     width: 100%;
+  }
+
+  .hero-contact a {
+    flex: 1;
+    justify-content: center;
   }
 
   .timeline article {
