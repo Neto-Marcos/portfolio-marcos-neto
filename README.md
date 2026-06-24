@@ -1,30 +1,52 @@
-# Portfolio Marcos Neto
+# Marcos Neto | Dashboard de Portfolio
 
-Dashboard de portfolio estatico para apresentar o projeto MM Check e facilitar publicacao na Vercel.
+Dashboard de portfolio profissional em HTML, CSS e JavaScript puro.
+
+## Objetivo
+
+Apresentar projetos, habilidades e evolucao como desenvolvedor, com foco em backend, Java, Python, sistemas web, automacao e solucoes reais.
+
+## Tecnologias
+
+- HTML5
+- CSS3 responsivo
+- JavaScript puro
+- Design mobile-first
+- Publicacao via Vercel ou GitHub Pages
+
+## Como rodar localmente
+
+Basta abrir o arquivo `index.html` no navegador.
+
+Opcionalmente, rode um servidor local:
+
+```bash
+npx serve .
+```
 
 ## Como publicar na Vercel
 
-1. Acesse <https://vercel.com/dashboard>.
-2. Clique em **Add New > Project**.
-3. Importe o repositorio `Neto-Marcos/mm-check`.
-4. Em **Root Directory**, escolha:
+1. Importe este repositorio na Vercel.
+2. Framework: **Other**.
+3. Build Command: deixe vazio.
+4. Output Directory: deixe vazio ou use `.`.
+5. Clique em Deploy.
 
-```text
-portfolio-marcos-neto
-```
+## Como publicar no GitHub Pages
 
-5. Em **Framework Preset**, escolha **Other**.
-6. Deixe **Build Command** vazio.
-7. Deixe **Output Directory** vazio ou como `.`.
-8. Clique em **Deploy**.
+1. Va em **Settings > Pages**.
+2. Em **Source**, escolha a branch `main`.
+3. Escolha a pasta raiz `/`.
+4. Salve e aguarde o link ser gerado.
 
-Depois disso, todo push no GitHub atualiza o portfolio automaticamente.
+## Personalizacao rapida
 
-## O que editar depois
+No arquivo `index.html`, altere:
 
-No arquivo `index.html`, procure por:
+- `seu-email@exemplo.com`
+- link do LinkedIn
+- link do WhatsApp
 
-- `mailto:seu-email@exemplo.com`
-- `https://www.linkedin.com/`
+## Autor
 
-Troque pelo seu e-mail e LinkedIn reais.
+Marcos Neto
