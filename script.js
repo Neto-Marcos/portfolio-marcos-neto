@@ -32,7 +32,6 @@ const dialogText = document.querySelector("#dialogText");
 const dialogStatus = document.querySelector("#dialogStatus");
 const dialogStack = document.querySelector("#dialogStack");
 const closeDialog = document.querySelector(".dialog-close");
-const copyEmail = document.querySelector("#copyEmail");
 
 menuToggle?.addEventListener("click", () => {
   sidebar?.classList.toggle("open");
@@ -65,19 +64,6 @@ document.querySelectorAll("[data-detail]").forEach((button) => {
 closeDialog?.addEventListener("click", () => dialog.close());
 dialog?.addEventListener("click", (event) => {
   if (event.target === dialog) dialog.close();
-});
-
-copyEmail?.addEventListener("click", async () => {
-  const email = "marcos.neto0706@gmail.com";
-  try {
-    await navigator.clipboard.writeText(email);
-    copyEmail.textContent = "Email copiado";
-    setTimeout(() => {
-      copyEmail.textContent = "Copiar email";
-    }, 1600);
-  } catch {
-    copyEmail.textContent = email;
-  }
 });
 
 const setActiveNav = (id) => {
