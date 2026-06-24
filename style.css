@@ -194,7 +194,6 @@ img {
   gap: 10px;
 }
 
-.icon-button,
 .top-link,
 .button,
 .filters button,
@@ -207,11 +206,6 @@ img {
   color: var(--text);
   font-weight: 900;
   transition: 180ms ease;
-}
-
-.icon-button {
-  width: 44px;
-  height: 44px;
 }
 
 .top-link {
@@ -312,7 +306,6 @@ p {
 
 .button:hover,
 .top-link:hover,
-.icon-button:hover,
 .filters button:hover,
 .project-card button:hover,
 .contact-card a:hover,

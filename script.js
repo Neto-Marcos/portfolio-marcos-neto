@@ -31,10 +31,8 @@ const projectDetails = {
   }
 };
 
-const body = document.body;
 const sidebar = document.querySelector(".sidebar");
 const menuToggle = document.querySelector(".menu-toggle");
-const themeToggle = document.querySelector("#themeToggle");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const projectCards = document.querySelectorAll(".project-card");
 const navLinks = document.querySelectorAll("[data-nav], .mobile-nav a");
@@ -47,14 +45,6 @@ const dialogStatus = document.querySelector("#dialogStatus");
 const dialogStack = document.querySelector("#dialogStack");
 const closeDialog = document.querySelector(".dialog-close");
 const copyEmail = document.querySelector("#copyEmail");
-
-const savedTheme = localStorage.getItem("portfolioTheme");
-if (savedTheme === "premium") body.classList.add("premium");
-
-themeToggle?.addEventListener("click", () => {
-  body.classList.toggle("premium");
-  localStorage.setItem("portfolioTheme", body.classList.contains("premium") ? "premium" : "purple");
-});
 
 menuToggle?.addEventListener("click", () => {
   sidebar?.classList.toggle("open");
