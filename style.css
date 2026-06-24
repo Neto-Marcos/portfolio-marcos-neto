@@ -168,9 +168,9 @@ img {
 }
 
 .content {
-  width: min(1240px, calc(100% - 340px));
+  width: auto;
   margin-left: 320px;
-  padding: 18px 18px 88px;
+  padding: 18px 24px 88px 18px;
 }
 
 .topbar {
