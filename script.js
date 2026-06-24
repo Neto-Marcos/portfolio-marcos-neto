@@ -1,6 +1,6 @@
 const projectDetails = {
-  "mm-check": {
-    title: "MM Check",
+  "mn-check": {
+    title: "MN Check",
     status: "Em desenvolvimento",
     text: "Sistema operacional para expedição e contagem de estoque, com conferência por código, importação de PDF, dashboard, histórico e persistência em PostgreSQL.",
     stack: ["Java", "Spring Boot", "PostgreSQL", "PDFBox", "JavaScript"]
