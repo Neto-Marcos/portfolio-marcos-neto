@@ -8,8 +8,8 @@ const projectDetails = {
   biblioteca: {
     title: "Sistema de Biblioteca",
     status: "Concluído",
-    text: "Projeto academico em Java para gerenciar livros e revistas. Usa a classe abstrata Material, as subclasses Livro e Revista, o enum Genero e uma Biblioteca com ArrayList de materiais.",
-    stack: ["Java", "POO", "Heranca", "ArrayList"]
+    text: "Projeto da faculdade em Java para gerenciar livros e revistas. Usa a classe abstrata Material, as subclasses Livro e Revista, o enum Genero e uma Biblioteca com ArrayList de materiais.",
+    stack: ["Java", "POO", "Herança", "ArrayList"]
   },
   ponto: {
     title: "Aplicativo de Ponto Inteligente",
