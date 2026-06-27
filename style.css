@@ -383,6 +383,7 @@ p {
 
 .grid-two,
 .spotlight,
+.library-showcase,
 .contact {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -432,6 +433,82 @@ p {
 
 .spotlight-card {
   padding: 20px;
+}
+
+.library-showcase {
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  background:
+    radial-gradient(circle at 86% 20%, rgba(52, 211, 153, 0.14), transparent 18rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.028));
+}
+
+.library-terminal {
+  min-height: 310px;
+  padding: 18px;
+  border: 1px solid rgba(139, 92, 246, 0.34);
+  border-radius: 24px;
+  background: rgba(5, 5, 8, 0.78);
+  box-shadow: inset 0 0 36px rgba(139, 92, 246, 0.1);
+  overflow: hidden;
+}
+
+.terminal-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.terminal-bar span {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: #f87171;
+}
+
+.terminal-bar span:nth-child(2) {
+  background: #fbbf24;
+}
+
+.terminal-bar span:nth-child(3) {
+  background: #34d399;
+}
+
+.code-flow {
+  display: grid;
+  gap: 14px;
+}
+
+.code-line {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  padding: 13px 15px;
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-radius: 14px;
+  background: rgba(139, 92, 246, 0.12);
+  color: #ddd6fe;
+  font-family: "Cascadia Code", "Fira Code", monospace;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(-18px);
+  animation: codeSlide 5.6s ease-in-out infinite;
+}
+
+.line-two {
+  margin-left: 28px;
+  animation-delay: 0.65s;
+}
+
+.line-three {
+  margin-left: 56px;
+  animation-delay: 1.3s;
+}
+
+.line-four {
+  margin-left: 84px;
+  color: #a7f3d0;
+  animation-delay: 1.95s;
 }
 
 .status-line {
@@ -660,6 +737,24 @@ dialog::backdrop {
   }
 }
 
+@keyframes codeSlide {
+  0%,
+  14% {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  28%,
+  72% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  86%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(10px);
+  }
+}
+
 @media (max-width: 1120px) {
   .sidebar {
     transform: translateX(-112%);
@@ -674,6 +769,7 @@ dialog::backdrop {
   .hero,
   .grid-two,
   .spotlight,
+  .library-showcase,
   .contact {
     grid-template-columns: 1fr;
   }
@@ -713,6 +809,16 @@ dialog::backdrop {
 
   .project-card {
     min-height: auto;
+  }
+
+  .library-terminal {
+    min-height: 260px;
+  }
+
+  .line-two,
+  .line-three,
+  .line-four {
+    margin-left: 0;
   }
 
   .mobile-nav {
