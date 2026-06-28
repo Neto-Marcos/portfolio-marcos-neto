@@ -2,24 +2,12 @@ const projectDetails = {
   "mn-check": {
     title: "MN Check",
     status: "Em desenvolvimento",
-    text: "Sistema operacional para expedição e contagem de estoque, com conferência por código, importação de PDF, dashboard, histórico e persistência em PostgreSQL.",
+    text: "Sistema operacional para expedicao e contagem de estoque, com conferencia por codigo, importacao de PDF, dashboard, historico e persistencia em PostgreSQL.",
     stack: ["Java", "Spring Boot", "PostgreSQL", "PDFBox", "JavaScript"]
-  },
-  biblioteca: {
-    title: "Sistema de Biblioteca",
-    status: "Concluído",
-    text: "Projeto da faculdade em Java para gerenciar livros e revistas. Usa a classe abstrata Material, as subclasses Livro e Revista, o enum Genero e uma Biblioteca com ArrayList de materiais.",
-    stack: ["Java", "POO", "Herança", "ArrayList"]
-  },
-  ponto: {
-    title: "Aplicativo de Ponto Inteligente",
-    status: "Protótipo",
-    text: "Ideia de sistema para registro de ponto, reconhecimento facial, cálculo de horas extras e apoio à folha de pagamento.",
-    stack: ["Python", "IA", "Automação"]
   }
 };
 
-const navLinks = document.querySelectorAll("[data-nav], .mobile-nav a");
+const navLinks = document.querySelectorAll(".topbar nav a");
 const sections = document.querySelectorAll("main section[id]");
 const reveals = document.querySelectorAll(".reveal");
 const dialog = document.querySelector("#projectDialog");
@@ -32,11 +20,10 @@ const closeDialog = document.querySelector(".dialog-close");
 document.querySelectorAll("[data-detail]").forEach((button) => {
   button.addEventListener("click", () => {
     const detail = projectDetails[button.dataset.detail];
-    if (!detail) return;
+    if (!detail || !dialog) return;
     dialogTitle.textContent = detail.title;
     dialogText.textContent = detail.text;
     dialogStatus.textContent = detail.status;
-    dialogStatus.className = `status ${detail.status === "Concluído" ? "done" : detail.status === "Protótipo" ? "prototype" : "dev"}`;
     dialogStack.innerHTML = detail.stack.map((item) => `<span>${item}</span>`).join("");
     dialog.showModal();
   });
@@ -49,9 +36,7 @@ dialog?.addEventListener("click", (event) => {
 
 const setActiveNav = (id) => {
   navLinks.forEach((link) => {
-    const href = link.getAttribute("href") || "";
-    const target = link.dataset.nav || href.replace("#", "");
-    link.classList.toggle("active", target === id);
+    link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
   });
 };
 
@@ -62,7 +47,7 @@ const sectionObserver = new IntersectionObserver(
       .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
     if (visible) setActiveNav(visible.target.id);
   },
-  { threshold: [0.34, 0.55, 0.78] }
+  { threshold: [0.35, 0.6] }
 );
 
 sections.forEach((section) => sectionObserver.observe(section));

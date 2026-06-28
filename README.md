@@ -1,6 +1,6 @@
-# Marcos Neto | Dashboard de Portfolio
+# Marcos Neto | Portfolio
 
-Dashboard de portfolio profissional em HTML, CSS e JavaScript puro.
+Portfolio profissional em HTML, CSS e JavaScript puro.
 
 ## Objetivo
 
@@ -44,8 +44,8 @@ npx serve .
 No arquivo `index.html`, altere:
 
 - `marcos.neto0706@gmail.com`
+- `https://instagram.com/marcosneto.dev`
 - `https://www.linkedin.com/in/marcos-neto-bbab573b6/`
-- `https://wa.me/5583991744139`
 
 ## Autor
 
