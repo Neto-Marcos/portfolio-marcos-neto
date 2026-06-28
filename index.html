@@ -2,171 +2,389 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#050308" />
+    <meta name="theme-color" content="#030303" />
     <meta
       name="description"
-      content="Portfolio de Marcos Neto, desenvolvedor em formacao com foco em backend, Java, Python, PostgreSQL e sistemas web."
+      content="Portfólio de Marcos Neto, desenvolvedor em formação com foco em backend, automação, Java, Python, PostgreSQL e sistemas web."
     />
-    <title>Marcos Neto | Portfolio</title>
-    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./assets/logo.svg" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./style.css" />
+    <title>Marcos Neto | MN-Check</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-grid" aria-hidden="true"></div>
-    <header class="topbar">
-      <a class="brand" href="#inicio">marcosneto.dev</a>
-      <nav aria-label="Navegacao principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#mn-check">MN-Check</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#stack">Stack</a>
-        <a href="#processo">Processo</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path d="M12 .8a11.2 11.2 0 0 0-3.5 21.8c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.9 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2V22c0 .3.2.7.8.6A11.2 11.2 0 0 0 12 .8Z" />
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 3.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8Zm0 2a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8Zm5-2.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.1V17h16V8.1l-7.4 5.1a1 1 0 0 1-1.2 0L4 8.1Zm1.3-1.1 6.7 4.6L18.7 7H5.3Z" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path d="M5.2 8.8H2.4V22h2.8V8.8ZM3.8 2a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4Zm7.3 6.8H8.4V22h2.8v-6.8c0-1.8.8-3.6 2.8-3.6s2.1 1.9 2.1 3.7V22h2.8v-7.5c0-3.7-1.6-6-4.8-6-1.6 0-2.6.9-3 1.7V8.8Z" />
+      </symbol>
+      <symbol id="icon-java" viewBox="0 0 24 24">
+        <path d="M12.7 2.1c2.1 1.8-3.8 3.9-.6 6.3.9.7.4 1.6-.6 2.4.4-1.2-.5-1.7-1.2-2.5-1.5-1.7 2.6-3.6 2.4-6.2Zm3.6 3c1.6 2.4-4.4 3.4-2.6 5.9.5.7.2 1.3-.5 1.9.1-1-.6-1.6-1.1-2.2-1.1-1.5 2.9-2.9 4.2-5.6ZM7.1 13.4c3.2.9 7.4.8 10-.1.8-.3 1.5.1.9.6-1.5 1.5-8.1 1.7-11.2.1-.5-.3-.2-.8.3-.6Zm-1 2.2c3.8 1.2 9.8 1.1 13-.1.9-.4 1.8.2.9.9-2.1 1.8-10.2 2-14.2.2-.7-.3-.4-1.2.3-1Zm1.2 2.6c2.8.8 7.6.8 10.2 0 1-.3 1.6.4.8 1-1.8 1.3-8.7 1.5-11.6.2-.7-.3-.2-1.4.6-1.2Zm-2.9 2c4.9 2.3 13.6 2 15.6.2.5-.5 1.6-.2 1.1.5-1.8 2.5-12 3-17.1.5-.8-.4-.5-1.6.4-1.2Z" />
+      </symbol>
+      <symbol id="icon-python" viewBox="0 0 24 24">
+        <path d="M11.9 2c-3 0-4.5.8-4.5 2.3V7h5.1v1H5.2C3.7 8 2 9.4 2 12s1.5 4 3.1 4h1.3v-2.2c0-1.8 1.5-3.3 3.4-3.3h5.1c1.4 0 2.5-1.1 2.5-2.5V4.3C17.4 2.8 15 2 11.9 2Zm-2.7 2.1a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm8.4 3.9v2.2c0 1.8-1.5 3.3-3.4 3.3H9.1c-1.4 0-2.5 1.1-2.5 2.5v3.7c0 1.5 2.4 2.3 5.5 2.3s4.5-.8 4.5-2.3V17h-5.1v-1h7.3c1.5 0 3.2-1.4 3.2-4s-1.5-4-3.1-4h-1.3Zm-2.8 9.9a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
+      </symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24">
+        <path d="M12 3C7 3 3.5 4.7 3.5 7v10c0 2.3 3.5 4 8.5 4s8.5-1.7 8.5-4V7C20.5 4.7 17 3 12 3Zm0 2c4 0 6.5 1.2 6.5 2S16 9 12 9 5.5 7.8 5.5 7 8 5 12 5Zm0 6c2.7 0 5-.5 6.5-1.5V12c0 .8-2.5 2-6.5 2s-6.5-1.2-6.5-2V9.5C7 10.5 9.3 11 12 11Zm0 5c2.7 0 5-.5 6.5-1.5V17c0 .8-2.5 2-6.5 2s-6.5-1.2-6.5-2v-2.5C7 15.5 9.3 16 12 16Z" />
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m8.2 7.2-5 4.8 5 4.8 1.4-1.4L6 12l3.6-3.4-1.4-1.4Zm7.6 0-1.4 1.4L18 12l-3.6 3.4 1.4 1.4 5-4.8-5-4.8Zm-2.1-2-3.3 13.3 1.9.5 3.3-13.3-1.9-.5Z" />
+      </symbol>
+    </svg>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="logo" href="#inicio" aria-label="Marcos Neto home">marcosneto.dev</a>
+        <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <a href="#produto">MN-Check</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#stack">Stack</a>
+          <a href="#processo">Processo</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </header>
 
-    <main>
-      <section id="inicio" class="hero section">
-        <span class="pill">Desenvolvedor em formacao</span>
-        <h1>Marcos Neto</h1>
-        <p class="stack-line">
-          <span>Java</span><i></i><span>Python</span><i></i><span>PostgreSQL</span><i></i><span>Sistemas Web</span>
-        </p>
-        <p class="hero-copy">
-          Desenvolvedor em formacao, criando solucoes web com foco em backend,
-          automacao e problemas reais do dia a dia de empresas.
-        </p>
-        <div class="social-row" aria-label="Links principais">
-          <a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://instagram.com/marcosneto.dev" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="mailto:marcos.neto0706@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </section>
-
-      <section id="sobre" class="section split reveal">
-        <div>
-          <span class="pill small">Sobre mim</span>
-          <h2>Aprendizado com aplicacao real.</h2>
-        </div>
-        <div class="copy-card">
-          <p>
-            Sou Marcos Neto, desenvolvedor em formacao com foco em sistemas web,
-            backend, automacao e solucoes praticas para empresas.
-          </p>
-          <p>
-            Tenho buscado aprender criando projetos que resolvem problemas reais:
-            conferencia de expedicao, controle de estoque, dashboards operacionais
-            e processos manuais que podem ser automatizados.
-          </p>
-        </div>
-      </section>
-
-      <section id="mn-check" class="section feature reveal">
-        <div>
-          <span class="pill small">Projeto destaque</span>
-          <h2>MN Check</h2>
-          <p>
-            Sistema inteligente de conferencia de expedicao com leitura de codigos,
-            controle de contagem de estoque, upload de PDF e dashboard operacional.
-          </p>
-          <div class="tags">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>PostgreSQL</span>
-            <span>PDFBox</span>
-            <span>JavaScript</span>
+      <main>
+        <section class="hero section" id="inicio">
+          <div class="hero-copy">
+            <p class="eyebrow">Desenvolvedor em formação</p>
+            <h1>Marcos Neto</h1>
+            <div class="hero-title tech-strip" aria-label="Java, Python, PostgreSQL e Sistemas Web">
+              <span><svg><use href="#icon-java"></use></svg>Java</span>
+              <span><svg><use href="#icon-python"></use></svg>Python</span>
+              <span><svg><use href="#icon-database"></use></svg>PostgreSQL</span>
+              <span><svg><use href="#icon-code"></use></svg>Sistemas Web</span>
+            </div>
+            <p class="hero-text">
+              Desenvolvedor em formação, criando soluções web com foco em backend,
+              automação e problemas reais do dia a dia de empresas.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-social" href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer"><svg><use href="#icon-github"></use></svg>GitHub</a>
+              <a class="button button-social" href="https://www.instagram.com/marcosneto.dev/" target="_blank" rel="noreferrer"><svg><use href="#icon-instagram"></use></svg>Instagram</a>
+              <a class="button button-social" href="mailto:marcos.neto0706@gmail.com"><svg><use href="#icon-mail"></use></svg>Email</a>
+              <a class="button button-social" href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer"><svg><use href="#icon-linkedin"></use></svg>LinkedIn</a>
+            </div>
           </div>
-        </div>
-        <div class="terminal-card">
-          <div class="terminal-top"><span></span><span></span><span></span></div>
-          <strong>operation.status = "em desenvolvimento"</strong>
-          <p>Conferencia por CODE 128</p>
-          <p>Persistencia em Neon PostgreSQL</p>
-          <p>Deploy e testes em ambiente real</p>
-        </div>
-      </section>
+        </section>
 
-      <section id="projetos" class="section reveal">
-        <div class="section-title">
-          <span class="pill small">Projetos</span>
-          <h2>Portfolio em construcao</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="status">Em desenvolvimento</span>
-            <h3>MN Check</h3>
-            <p>Sistema para conferencia de expedicao, validacao de produtos, contagem de estoque, PDF e dashboard.</p>
-            <button type="button" data-detail="mn-check">Ver detalhes</button>
-          </article>
-          <article class="project-card">
-            <span class="status done">Concluido</span>
-            <h3>Sistema de Biblioteca</h3>
-            <p>Projeto academico em Java usando classes, heranca, polimorfismo, enum e ArrayList.</p>
-            <a href="https://github.com/Neto-Marcos/ProjetoBiblioteca" target="_blank" rel="noreferrer">Ver GitHub</a>
-          </article>
-          <article class="project-card ghost-card">
-            <span class="status future">Proximo</span>
-            <h3>Mais projetos em breve</h3>
-            <p>Novas ideias e estudos praticos vao entrar aqui conforme forem ficando apresentaveis.</p>
-          </article>
-        </div>
-      </section>
+        <section class="about section" id="sobre">
+          <div class="section-copy">
+            <span class="eyebrow inline">Sobre mim</span>
+            <h2>Aprendizado com aplicação real.</h2>
+            <p>
+              Sou Marcos Neto, desenvolvedor em formação com foco em backend,
+              automação e sistemas web para empresas.
+            </p>
+            <p>
+              Em vez de estudar apenas teoria, eu busco construir produtos que resolvem
+              problemas concretos: conferência de expedição, controle de estoque,
+              dashboards operacionais e processos manuais que podem virar sistema.
+            </p>
+            <div class="personal-card-grid">
+              <article>
+                <strong>Foco atual</strong>
+                <span>Backend, automação e sistemas web com aplicação prática.</span>
+              </article>
+              <article>
+                <strong>Como eu aprendo</strong>
+                <span>Construindo projetos reais, testando, corrigindo e melhorando.</span>
+              </article>
+              <article>
+                <strong>Objetivo</strong>
+                <span>Crescer como desenvolvedor criando soluções úteis para operações.</span>
+              </article>
+            </div>
+          </div>
+          <div class="pixel-orbit" aria-hidden="true">
+            <div class="pixel-cat"></div>
+            <span class="star star-a"></span>
+            <span class="star star-b"></span>
+            <span class="ring ring-a"></span>
+            <span class="ring ring-b"></span>
+          </div>
+        </section>
 
-      <section id="stack" class="section reveal">
-        <div class="section-title">
-          <span class="pill small">Stack</span>
-          <h2>Tecnologias e ferramentas</h2>
-        </div>
-        <div class="stack-grid">
-          <article><span>Backend</span><strong>Java, Python, APIs e regras de negocio</strong></article>
-          <article><span>Frontend</span><strong>HTML, CSS, JavaScript e responsividade</strong></article>
-          <article><span>Banco de dados</span><strong>PostgreSQL, Neon e persistencia</strong></article>
-          <article><span>Ferramentas</span><strong>Git, GitHub, Render, VS Code e IntelliJ</strong></article>
-        </div>
-      </section>
+        <section class="product section" id="produto">
+          <div class="section-heading">
+            <span class="eyebrow inline">Projeto principal</span>
+            <h2>MN-Check</h2>
+            <p>
+              Meu projeto em produção: um sistema web para conferência,
+              contagem e controle operacional.
+            </p>
+          </div>
 
-      <section id="processo" class="section reveal">
-        <div class="section-title">
-          <span class="pill small">Processo</span>
-          <h2>Como estou evoluindo</h2>
-        </div>
-        <div class="timeline">
-          <article><span>01</span><p>Base em logica de programacao e resolucao de problemas.</p></article>
-          <article><span>02</span><p>Projeto Biblioteca em Java com orientacao a objetos.</p></article>
-          <article><span>03</span><p>Criacao do MN Check a partir de uma dor operacional real.</p></article>
-          <article><span>04</span><p>Deploy, banco de dados e melhorias continuas no portfolio.</p></article>
-        </div>
-      </section>
+          <div class="product-layout">
+            <div class="product-media">
+              <img src="assets/mn-check-dashboard.png" alt="Dashboard do MN-Check com visão geral operacional" />
+            </div>
+            <div class="product-info">
+              <div class="product-summary">
+                <span class="status dev">Em desenvolvimento</span>
+                <h3>Sistema de conferência e contagem</h3>
+                <p>
+                  Print real do app, com dashboard, separação, conferência,
+                  contagem e histórico em uma rotina operacional.
+                </p>
+              </div>
+              <div class="product-capabilities">
+                <div class="chips">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>PostgreSQL</span>
+                  <span>PDFBox</span>
+                  <span>JavaScript</span>
+                  <span>Render</span>
+                </div>
+                <a class="button button-primary product-details-button" href="https://mn-check-production.up.railway.app" target="_blank" rel="noreferrer">
+                  Abrir app
+                </a>
+                <button class="button button-ghost product-details-button" type="button" data-open-project>
+                  Saiba mais
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section id="contato" class="section contact reveal">
-        <div>
-          <span class="pill small">Contato</span>
-          <h2>Vamos conversar sobre tecnologia e oportunidades.</h2>
-          <p>Estou aberto a oportunidades, feedbacks e conexoes com pessoas da area.</p>
-        </div>
-        <div class="contact-links">
-          <a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://instagram.com/marcosneto.dev" target="_blank" rel="noreferrer">@marcosneto.dev</a>
-          <a href="mailto:marcos.neto0706@gmail.com">marcos.neto0706@gmail.com</a>
-          <a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </section>
-    </main>
+        <section class="projects section" id="projetos">
+          <div class="section-heading">
+            <span class="eyebrow inline">Mais projetos</span>
+            <h2>ProjetoBiblioteca</h2>
+            <p>
+              Sistema simples de gerenciamento de biblioteca feito em Java para console,
+              usando orientação a objetos e validações básicas.
+            </p>
+          </div>
 
-    <dialog id="projectDialog">
+          <div class="project-card">
+            <div class="code-panel" aria-label="Resumo da estrutura do ProjetoBiblioteca">
+              <div class="code-panel-header">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <pre><code>src/
+  app/
+    Main.java
+  model/
+    Biblioteca.java
+    Genero.java
+    Livro.java
+    Material.java
+    Revista.java</code></pre>
+            </div>
+            <div class="project-card-info">
+              <span class="status dev">Em desenvolvimento</span>
+              <h3>Gerenciamento de livros e revistas</h3>
+              <p>
+                Projeto de estudo com classe abstrata, herança, enum e uma biblioteca
+                que armazena materiais em uma lista dinâmica.
+              </p>
+              <div class="chips">
+                <span>Java</span>
+                <span>POO</span>
+                <span>Herança</span>
+                <span>ArrayList</span>
+                <span>Enum</span>
+                <span>Console</span>
+              </div>
+              <a class="button button-primary product-details-button" href="https://github.com/Neto-Marcos/ProjetoBiblioteca" target="_blank" rel="noreferrer">
+                Ver no GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills section" id="stack" aria-labelledby="skills-title">
+          <div class="section-heading compact">
+            <span class="eyebrow inline">Stack</span>
+            <h2 id="skills-title">Tecnologias que venho usando</h2>
+          </div>
+          <div class="skill-grid">
+            <article class="skill-card">
+              <h3>Backend</h3>
+              <div class="chips">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>APIs</span>
+                <span>Regras de negócio</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <h3>Dados</h3>
+              <div class="chips">
+                <span>PostgreSQL</span>
+                <span>Neon</span>
+                <span>Persistência</span>
+                <span>Histórico</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <h3>Interface</h3>
+              <div class="chips">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsivo</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <h3>Automação</h3>
+              <div class="chips">
+                <span>Python</span>
+                <span>PDFBox</span>
+                <span>IA</span>
+                <span>Validação</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="process section" id="processo">
+          <div class="section-heading">
+            <span class="eyebrow inline">Processo</span>
+            <h2>Do problema ao sistema.</h2>
+            <p>
+              O MN-Check foi pensado como produto: entender a rotina, modelar o fluxo,
+              validar dados e entregar uma tela clara para quem opera.
+            </p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="year">01</div>
+              <div class="timeline-card">
+                <h3>Dor real da expedição</h3>
+                <p>Operação</p>
+                <span>Mapas, conferência, erros e contagem precisavam de mais visibilidade.</span>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="year">02</div>
+              <div class="timeline-card">
+                <h3>Fluxo separado por etapas</h3>
+                <p>Produto</p>
+                <span>Separação, conferência, contagem, histórico e usuários organizados em módulos.</span>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="year">03</div>
+              <div class="timeline-card">
+                <h3>Backend persistente</h3>
+                <p>Java e PostgreSQL</p>
+                <span>Dados salvos para manter histórico, acompanhar divergências e evitar perda de informação.</span>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="year">04</div>
+              <div class="timeline-card">
+                <h3>Dashboard operacional</h3>
+                <p>Interface</p>
+                <span>Tela escura, objetiva e feita para acompanhar a rotina sem distração.</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact section" id="contato">
+          <div class="section-heading">
+            <span class="eyebrow inline">Contato</span>
+            <h2>Vamos conversar sobre tecnologia e oportunidades.</h2>
+            <p>Estou aberto a feedbacks, oportunidades e conexões com pessoas da área.</p>
+          </div>
+          <div class="contact-grid">
+            <form class="contact-form">
+              <h3>Envie uma mensagem</h3>
+              <label>
+                Nome
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                Mensagem
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button class="button button-primary" type="submit">Enviar mensagem</button>
+            </form>
+            <div class="contact-stack">
+              <article class="contact-card">
+                <p>
+                  Meu foco atual é evoluir como desenvolvedor criando sistemas úteis,
+                  com backend bem organizado, interfaces claras e solução para problemas reais.
+                </p>
+                <ul>
+                  <li>Backend e sistemas web</li>
+                  <li>Automação de processos</li>
+                  <li>Conferência e controle operacional</li>
+                  <li>Java, Python e PostgreSQL</li>
+                </ul>
+              </article>
+              <article class="contact-card social-card">
+                <h3>Redes sociais</h3>
+                <div class="social-links">
+                  <a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer" aria-label="GitHub"><svg><use href="#icon-github"></use></svg></a>
+                  <a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+                  <a href="mailto:marcos.neto0706@gmail.com" aria-label="Email"><svg><use href="#icon-mail"></use></svg></a>
+                  <a href="https://www.instagram.com/marcosneto.dev/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg><use href="#icon-instagram"></use></svg></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p>Desenvolvido por Marcos Neto.</p>
+        <span>Portfólio pessoal com foco em backend, automação e sistemas web.</span>
+      </footer>
+    </div>
+
+    <dialog id="projectDialog" class="project-dialog">
       <div class="dialog-card">
         <button class="dialog-close" type="button" aria-label="Fechar">x</button>
-        <span id="dialogStatus" class="status">Projeto</span>
-        <h3 id="dialogTitle">Projeto</h3>
-        <p id="dialogText"></p>
-        <div id="dialogStack" class="tags"></div>
+        <span class="status dev">MN-Check</span>
+        <h3>Detalhes do projeto</h3>
+        <p>
+          O MN-Check nasceu de uma necessidade real de operação: reduzir erros,
+          organizar mapas, validar produtos e registrar histórico de conferência.
+        </p>
+        <div class="feature-grid dialog-feature-grid">
+          <article>
+            <strong>Conferência</strong>
+            <span>Leitura de códigos CODE 128 e validação de produtos.</span>
+          </article>
+          <article>
+            <strong>Contagem</strong>
+            <span>Controle de mapas, itens conferidos e finalizados.</span>
+          </article>
+          <article>
+            <strong>PDF</strong>
+            <span>Upload e leitura de arquivos para apoiar o fluxo operacional.</span>
+          </article>
+          <article>
+            <strong>Dashboard</strong>
+            <span>Visão geral com dados da operação em tempo real.</span>
+          </article>
+        </div>
       </div>
     </dialog>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
