@@ -1,268 +1,81 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#090910" />
-    <meta
-      name="description"
-      content="Dashboard de portfólio de Marcos Neto, desenvolvedor em formação focado em backend, Java, Python, sistemas web e soluções reais."
-    />
-    <title>Marcos Neto</title>
-    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./assets/logo.svg" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body class="premium">
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
-
-    <aside class="sidebar" aria-label="Navegação principal">
-      <nav class="side-nav">
-        <a class="active" href="#inicio" data-nav="inicio"><span>⌂</span>Início</a>
-        <a href="#sobre" data-nav="sobre"><span>◇</span>Sobre mim</a>
-        <a href="#projetos" data-nav="projetos"><span>▦</span>Projetos</a>
-        <a href="#habilidades" data-nav="habilidades"><span>✦</span>Habilidades</a>
-        <a href="#timeline" data-nav="timeline"><span>◷</span>Linha do tempo</a>
-        <a href="#contato" data-nav="contato"><span>↗</span>Contato</a>
-      </nav>
-
-      <div class="profile-card">
-        <span>Foco atual</span>
-        <strong>Backend, automação e sistemas reais</strong>
-      </div>
-    </aside>
-
-    <main class="content">
-      <section id="inicio" class="hero section reveal">
-        <div class="hero-copy">
-          <span class="eyebrow">Desenvolvedor em formação</span>
-          <h1>Marcos Neto</h1>
-          <p class="hero-title">Backend | Java | Python | Sistemas Web</p>
-          <p class="hero-text">
-            Estou construindo projetos práticos para resolver problemas reais de operação,
-            logística, automação e gestão. Meu foco é transformar ideias úteis em sistemas
-            web organizados, persistentes e apresentáveis.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projetos">Ver projetos</a>
-            <a class="button secondary" href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer">Ver GitHub</a>
-            <a class="button ghost" href="#contato">Entrar em contato</a>
-          </div>
-          <div class="hero-contact">
-            <a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="mailto:marcos.neto0706@gmail.com">Email</a>
-            <a href="https://wa.me/5583991744139" target="_blank" rel="noreferrer">WhatsApp</a>
-          </div>
-        </div>
-
-        <div class="hero-panel" aria-label="Resumo de métricas">
-          <div class="panel-header">
-            <span></span>
-            <strong>Developer OS</strong>
-            <small>online</small>
-          </div>
-          <div class="metrics-grid">
-            <article><span>Projetos criados</span><strong>3</strong></article>
-            <article><span>Tecnologias estudadas</span><strong>8</strong></article>
-            <article><span>Sistemas em desenvolvimento</span><strong>1</strong></article>
-            <article><span>Deploy publicado</span><strong>1</strong></article>
-          </div>
-          <div class="focus-strip">
-            <span>Projeto destaque</span>
-            <strong>MN Check</strong>
-            <small>Sistema operacional para conferência e contagem</small>
-          </div>
-        </div>
-      </section>
-
-      <section id="sobre" class="section grid-two reveal">
-        <div class="section-heading">
-          <span class="eyebrow">Sobre mim</span>
-          <h2>Aprendizado com aplicação real.</h2>
-        </div>
-        <div class="text-card">
-          <p>
-            Sou Marcos Neto, desenvolvedor em formação com foco em sistemas web, backend,
-            automação e soluções práticas para empresas. Tenho buscado aprender criando
-            projetos que resolvem problemas reais, especialmente em conferência de expedição,
-            controle de estoque, dashboards operacionais e processos manuais que podem ser
-            automatizados.
-          </p>
-          <p>
-            Meu objetivo é crescer como desenvolvedor criando sistemas confiáveis, bem
-            organizados e úteis para o dia a dia de uma operação.
-          </p>
-        </div>
-      </section>
-
-      <section class="spotlight section reveal" aria-label="Projeto em destaque">
-        <div>
-          <span class="eyebrow">Destaque</span>
-          <h2>MN Check</h2>
-          <p>
-            Sistema inteligente de conferência de expedição, leitura de códigos,
-            controle de contagem de estoque, upload de PDF e dashboard operacional.
-          </p>
-          <div class="tag-row">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>PostgreSQL</span>
-            <span>PDFBox</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-        <div class="spotlight-card">
-          <div class="status-line">
-            <strong>Operação</strong>
-            <span>Em desenvolvimento</span>
-          </div>
-          <div class="progress-list">
-            <div><span>Conferência</span><strong>CODE 128</strong></div>
-            <div><span>Persistência</span><strong>Neon PostgreSQL</strong></div>
-            <div><span>Deploy</span><strong>Render</strong></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="library-showcase section reveal" aria-label="Projeto Biblioteca Java">
-        <div>
-          <span class="eyebrow">Projeto acadêmico</span>
-          <h2>Sistema de Biblioteca em Java</h2>
-          <p>
-            Projeto desenvolvido para faculdade com orientação a objetos, classe abstrata
-            Material, herança com Livro e Revista, enum Genero e armazenamento com
-            ArrayList de materiais.
-          </p>
-          <div class="tag-row">
-            <span>Java</span>
-            <span>POO</span>
-            <span>Heranca</span>
-            <span>Polimorfismo</span>
-            <span>ArrayList</span>
-          </div>
-          <div class="hero-actions">
-            <a class="button primary" href="https://github.com/Neto-Marcos/ProjetoBiblioteca" target="_blank" rel="noreferrer">Abrir projeto</a>
-            <button type="button" class="button secondary" data-detail="biblioteca">Ver detalhes</button>
-          </div>
-        </div>
-
-        <div class="library-terminal" aria-hidden="true">
-          <div class="terminal-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="code-flow">
-            <strong class="code-line line-one">abstract class Material</strong>
-            <strong class="code-line line-two">class Livro extends Material</strong>
-            <strong class="code-line line-three">class Revista extends Material</strong>
-            <strong class="code-line line-four">ArrayList&lt;Material&gt; materiais</strong>
-          </div>
-        </div>
-      </section>
-
-      <section id="projetos" class="section reveal">
-        <div class="section-top">
-          <div>
-            <span class="eyebrow">Projetos</span>
-            <h2>Portfólio em construção</h2>
-          </div>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card" data-category="system">
-            <div class="card-icon">MC</div>
-            <span class="status dev">Em desenvolvimento</span>
-            <h3>MN Check</h3>
-            <p>Sistema inteligente de conferência de expedição, validação de produtos, leitura de códigos, contagem de estoque, upload de PDF e dashboard operacional.</p>
-            <div class="stack"><span>Java</span><span>PostgreSQL</span><span>JavaScript</span></div>
-            <button type="button" data-detail="mn-check">Ver detalhes</button>
-          </article>
-
-          <article class="project-card" data-category="system">
-            <div class="card-icon">SB</div>
-            <span class="status done">Concluído</span>
-            <h3>Sistema de Biblioteca</h3>
-            <p>Projeto da faculdade em Java para cadastro, pesquisa, listagem e exclusão de livros e revistas usando herança, polimorfismo e ArrayList.</p>
-            <div class="stack"><span>Java</span><span>POO</span><span>ArrayList</span></div>
-            <button type="button" data-detail="biblioteca">Ver detalhes</button>
-          </article>
-
-          <article class="project-card" data-category="prototype">
-            <div class="card-icon">PI</div>
-            <span class="status prototype">Protótipo</span>
-            <h3>Aplicativo de Ponto Inteligente</h3>
-            <p>Ideia de sistema para registro de ponto com reconhecimento facial, cálculo de horas extras, folha de pagamento e planilhas de horário.</p>
-            <div class="stack"><span>Python</span><span>IA</span><span>Automação</span></div>
-            <button type="button" data-detail="ponto">Ver detalhes</button>
-          </article>
-        </div>
-      </section>
-
-      <section id="habilidades" class="section reveal">
-        <div class="section-heading">
-          <span class="eyebrow">Habilidades</span>
-          <h2>Stack e ferramentas</h2>
-        </div>
-        <div class="skills-grid">
-          <article><span>Backend</span><strong>Java, Python, APIs, lógica de negócio</strong></article>
-          <article><span>Frontend</span><strong>HTML, CSS, JavaScript, responsividade</strong></article>
-          <article><span>Banco de dados</span><strong>PostgreSQL, Neon, persistência de dados</strong></article>
-          <article><span>Ferramentas</span><strong>Git, GitHub, Render, VS Code, IntelliJ, Codex</strong></article>
-          <article><span>IA e automação</span><strong>Gemini, Grok API, leitura de PDF, validação inteligente</strong></article>
-        </div>
-      </section>
-
-      <section id="timeline" class="section reveal">
-        <div class="section-heading">
-          <span class="eyebrow">Linha do tempo</span>
-          <h2>Minha evolução como desenvolvedor</h2>
-        </div>
-        <div class="timeline">
-          <article><span>01</span><div><strong>Início com lógica de programação</strong><p>Base para resolver problemas com clareza e sequência.</p></div></article>
-          <article><span>02</span><div><strong>Projeto Biblioteca em Java</strong><p>Aplicação acadêmica usando classes, herança, polimorfismo e coleções.</p></div></article>
-          <article><span>03</span><div><strong>Criação do MN Check</strong><p>Transformação de uma dor real em produto operacional.</p></div></article>
-          <article><span>04</span><div><strong>Deploy no Render</strong><p>Publicação do backend e acesso externo para testes.</p></div></article>
-          <article><span>05</span><div><strong>Integração com banco de dados</strong><p>Persistência com PostgreSQL/Neon para não perder dados.</p></div></article>
-          <article><span>06</span><div><strong>Uso de IA para automação</strong><p>Apoio na leitura de arquivos, validações e produtividade.</p></div></article>
-          <article><span>07</span><div><strong>Construção do portfólio profissional</strong><p>Apresentação pública dos projetos e da evolução técnica.</p></div></article>
-        </div>
-      </section>
-
-      <section id="contato" class="section contact reveal">
-        <div>
-          <span class="eyebrow">Contato</span>
-          <h2>Vamos conversar sobre tecnologia e oportunidades.</h2>
-          <p>Estou aberto a oportunidades, feedbacks e conexões com pessoas da área.</p>
-        </div>
-        <div class="contact-card">
-          <a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:marcos.neto0706@gmail.com">marcos.neto0706@gmail.com</a>
-          <a class="whatsapp" href="https://wa.me/5583991744139" target="_blank" rel="noreferrer">Abrir WhatsApp</a>
-        </div>
-      </section>
-    </main>
-
-    <nav class="mobile-nav" aria-label="Navegação mobile">
-      <a class="active" href="#inicio">Início</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#habilidades">Skills</a>
-      <a href="#contato">Contato</a>
-    </nav>
-
-    <dialog id="projectDialog">
-      <div class="dialog-card">
-        <button class="dialog-close" type="button" aria-label="Fechar">×</button>
-        <span id="dialogStatus" class="status dev">Projeto</span>
-        <h3 id="dialogTitle">Projeto</h3>
-        <p id="dialogText"></p>
-        <div id="dialogStack" class="stack"></div>
-      </div>
-    </dialog>
-
-    <script src="./script.js"></script>
-  </body>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scroll Expedition</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#030207;color:#fff;font-family:Inter,system-ui,sans-serif;min-height:520vh}
+  canvas{position:fixed;inset:0;width:100%;height:100%;opacity:.55}
+  .scene{position:fixed;inset:0;overflow:hidden;perspective:1000px}
+  .vignette{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,#31105d44,#030207 68%)}
+  nav{position:fixed;z-index:3;top:24px;left:28px;right:28px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#d9c9ff}
+  nav div{display:flex;gap:8px}.pill{border:1px solid #7d5cc855;border-radius:999px;padding:8px 13px;background:#07030fcc;color:inherit;text-decoration:none}
+  h1{position:fixed;z-index:3;left:28px;top:15vh;margin:0;max-width:780px;font-size:clamp(44px,9vw,110px);line-height:.86;letter-spacing:0;text-shadow:0 0 28px #6f38ff66}
+  .stage{position:absolute;inset:0;display:grid;place-items:center;transform-style:preserve-3d}
+  .mock{position:absolute;width:min(56vw,520px);height:min(78vh,680px);border:2px solid #8d55ff;background:#ffffff0b;box-shadow:0 0 52px #6f38ff22;opacity:.78}
+  .block{position:absolute;left:24%;right:24%;height:10%;background:#8f55ff;box-shadow:0 0 22px #7138ff44}
+  .block:nth-child(1){top:7%}.block:nth-child(2){top:22%}.block:nth-child(3){top:66%}.block:nth-child(4){top:82%}
+  .card{position:absolute;width:min(48vw,430px);height:120px;border:1px solid #b98cff88;border-radius:3px;background:linear-gradient(135deg,#ca63dd,#6c25f1);box-shadow:0 0 50px #6f38ff44;display:grid;place-items:center;will-change:transform,opacity,filter}
+  .card b{font-size:clamp(24px,3.8vw,42px);line-height:.95;text-align:center;color:#fff;text-shadow:0 0 14px #2b084f}
+  .a{transform:translate3d(0,0,0) rotateX(8deg) rotateY(-12deg)}
+  .b{transform:translate3d(70vw,4vh,-120px) rotateY(-36deg);opacity:.45}
+  .c{transform:translate3d(-65vw,12vh,-220px) rotateY(36deg);opacity:.3}
+  .line{position:absolute;width:1px;height:70vh;background:linear-gradient(#0000,#a98cff,#0000);left:50%;top:15vh;opacity:.5}
+  .hud{position:fixed;z-index:3;left:28px;bottom:28px;right:28px;display:flex;justify-content:space-between;align-items:end;color:#baa9df;font-size:14px}
+  .bar{width:min(360px,45vw);height:2px;background:#ffffff1c}.bar i{display:block;width:0;height:100%;background:#a98cff}
+  .hint{max-width:330px}
+  @media(max-width:700px){
+    body{min-height:620vh}
+    nav{left:16px;right:16px;top:16px}.pill{display:none}
+    h1{left:16px;top:9vh;max-width:340px;font-size:clamp(38px,14vw,58px)}
+    .mock{width:78vw;height:64vh;top:22vh}
+    .block{left:25%;right:25%;height:10%}
+    .card{width:58vw;height:78px}
+    .card b{font-size:clamp(20px,7vw,30px)}
+    .line{opacity:.25}
+    .hud{left:16px;right:16px;bottom:18px;display:block;font-size:12px}
+    .hint{display:block;max-width:78vw}
+    .bar{width:100%;margin-top:12px}
+  }
+</style>
+<canvas id="fx"></canvas>
+<main class="scene">
+  <div class="vignette"></div>
+  <nav><strong>Creative Expedition</strong><div><span class="pill">Home</span><a class="pill" href="https://instagram.com/marcosneto.dev" target="_blank" rel="noreferrer">@marcosneto.dev</a></div></nav>
+  <h1 id="title">Projetos em movimento.</h1>
+  <section class="stage">
+    <i class="line"></i>
+    <div class="mock"><i class="block"></i><i class="block"></i><i class="block"></i><i class="block"></i></div>
+    <div class="card a"><b id="w1">MN<br>CHECK</b></div>
+    <div class="card b"><b id="w2">BIBLIOTECA</b></div>
+    <div class="card c"><b id="w3">MAIS<br>PROJETOS</b></div>
+  </section>
+  <footer class="hud"><span class="hint" id="desc">Validador inteligente para conferir pedidos, PDFs e dados operacionais com mais velocidade.</span><span class="bar"><i id="bar"></i></span></footer>
+</main>
+<script>
+const c=fx,ctx=c.getContext("2d"),cards=[...document.querySelectorAll(".card")];
+const projects=[
+  ["MN\nCHECK","Validador inteligente para conferir pedidos, PDFs e dados operacionais com mais velocidade."],
+  ["BIBLIOTECA","Sistema simples para organizar acervo, consultas e fluxo de controle de uma biblioteca."],
+  ["MAIS\nPROJETOS","Mais projetos em breve..."]
+];
+let w,h,pts=[]; onresize=()=>{w=c.width=innerWidth;h=c.height=innerHeight;pts=Array.from({length:90},()=>({x:Math.random()*w,y:Math.random()*h,s:Math.random()*1.7+.4,v:Math.random()*.25+.08}))}; onresize();
+function lerp(a,b,t){return a+(b-a)*t}
+function draw(){
+  ctx.clearRect(0,0,w,h); ctx.fillStyle="#b28cff";
+  pts.forEach(p=>{p.y-=p.v;if(p.y<0){p.y=h;p.x=Math.random()*w}ctx.globalAlpha=.15+p.s*.12;ctx.beginPath();ctx.arc(p.x,p.y,p.s,0,7);ctx.fill()});
+  requestAnimationFrame(draw)
+} draw();
+function tick(){
+  const max=document.body.scrollHeight-innerHeight, p=max?scrollY/max:0, seg=Math.min(2,Math.floor(p*3)), local=p*3-seg;
+  title.style.transform=`translateY(${lerp(0,-70,p)}px)`; title.style.opacity=1-p*.75; bar.style.width=(p*100)+"%"; desc.innerText=projects[seg][1];
+  w1.innerText=projects[seg][0]; w2.innerText=projects[Math.min(seg+1,2)][0]; w3.innerText=projects[Math.min(seg+2,2)][0];
+  const m=innerWidth<700;
+  cards[0].style.transform=`translate3d(${lerp(m?-5:-8,m?-22:-32,local)}vw,${lerp(2,-5,local)}vh,${lerp(45,150,local)}px) rotateY(${lerp(-8,28,local)}deg) scale(${lerp(1,.82,local)})`; cards[0].style.opacity=1-local*.5;
+  cards[1].style.transform=`translate3d(${lerp(m?28:34,m?4:7,local)}vw,${lerp(-2,0,local)}vh,${lerp(-80,70,local)}px) rotateY(${lerp(-24,4,local)}deg) scale(${lerp(.9,1,local)})`; cards[1].style.opacity=.42+local*.58;
+  cards[2].style.transform=`translate3d(${lerp(m?18:20,m?0:-6,local)}vw,${lerp(6,4,local)}vh,${lerp(-120,20,local)}px) rotateY(${lerp(-12,0,local)}deg) scale(.92)`; cards[2].style.opacity=.25+p*.55;
+  requestAnimationFrame(tick)
+} tick();
+</script>
 </html>
