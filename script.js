@@ -33,8 +33,6 @@ window.addEventListener("pointermove", (event) => {
 
       pixelPet.style.setProperty("--pet-x", `${clamp(deltaX * 0.055 * pull, -14, 14)}px`);
       pixelPet.style.setProperty("--pet-y", `${clamp(deltaY * 0.045 * pull, -10, 10)}px`);
-      pixelPet.style.setProperty("--eye-x", `${clamp(deltaX * 0.025, -4, 4)}px`);
-      pixelPet.style.setProperty("--eye-y", `${clamp(deltaY * 0.025, -3, 3)}px`);
       pixelPet.classList.toggle("is-pet-close", distance < 230);
     }
 
@@ -47,8 +45,6 @@ window.addEventListener("pointerleave", () => {
   pixelPet?.classList.remove("is-pet-close");
   pixelPet?.style.removeProperty("--pet-x");
   pixelPet?.style.removeProperty("--pet-y");
-  pixelPet?.style.removeProperty("--eye-x");
-  pixelPet?.style.removeProperty("--eye-y");
 });
 
 const updateScrollProgress = () => {
