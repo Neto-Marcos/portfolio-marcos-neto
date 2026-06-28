@@ -611,23 +611,86 @@ body.is-pointer-active .site-shell::before {
   --pet-y: 0px;
   --pet-hop: 0px;
   --pet-scale: 1;
+  --eye-x: 0px;
+  --eye-y: 0px;
 }
 
-.pixel-pet {
+.pixel-cat {
   position: relative;
-  z-index: 1;
-  display: block;
-  width: clamp(190px, 19vw, 250px);
-  height: auto;
+  width: 14px;
+  height: 14px;
+  background: var(--purple-2);
   image-rendering: pixelated;
-  filter:
-    drop-shadow(0 0 12px rgba(176, 118, 255, 0.42))
-    drop-shadow(0 22px 28px rgba(0, 0, 0, 0.38));
+  box-shadow:
+    24px 0 var(--purple-2),
+    48px 0 var(--purple-2),
+    72px 0 var(--purple-2),
+    96px 0 var(--purple-2),
+    120px 0 var(--purple-2),
+    0 24px var(--purple-2),
+    24px 24px var(--purple-2),
+    48px 24px var(--purple-2),
+    72px 24px var(--purple-2),
+    96px 24px var(--purple-2),
+    120px 24px var(--purple-2),
+    144px 24px var(--purple-2),
+    -24px 48px var(--purple-2),
+    0 48px var(--purple-2),
+    24px 48px var(--purple-2),
+    48px 48px var(--purple-2),
+    72px 48px var(--purple-2),
+    96px 48px var(--purple-2),
+    120px 48px var(--purple-2),
+    144px 48px var(--purple-2),
+    -48px 72px var(--purple-2),
+    -24px 72px var(--purple-2),
+    0 72px var(--purple-2),
+    24px 72px var(--purple-2),
+    48px 72px var(--purple-2),
+    72px 72px var(--purple-2),
+    96px 72px var(--purple-2),
+    -72px 48px var(--purple-3),
+    -96px 24px var(--purple-3),
+    48px -24px var(--purple-3),
+    120px -24px var(--purple-3),
+    72px -48px var(--purple-3),
+    144px -48px var(--purple-3);
+  filter: drop-shadow(0 0 12px rgba(176, 118, 255, 0.85));
   transform: translate3d(var(--pet-x), calc(var(--pet-y) + var(--pet-hop)), 0) scale(var(--pet-scale));
-  transform-origin: 50% 78%;
+  transform-origin: 36px 96px;
   transition: filter 180ms ease;
   animation: pixel-pet-idle 2.7s steps(2, end) infinite;
   will-change: transform;
+}
+
+.pixel-cat::before,
+.pixel-cat::after {
+  content: "";
+  position: absolute;
+  image-rendering: pixelated;
+}
+
+.pixel-cat::before {
+  width: 10px;
+  height: 10px;
+  top: 26px;
+  left: 25px;
+  background: #07030d;
+  box-shadow: 72px 0 #07030d;
+  transform: translate3d(var(--eye-x), var(--eye-y), 0);
+  animation: pixel-pet-blink 4.2s steps(1, end) infinite;
+}
+
+.pixel-cat::after {
+  width: 12px;
+  height: 5px;
+  top: 51px;
+  left: 58px;
+  background: #f4e9ff;
+  box-shadow:
+    12px 0 #f4e9ff,
+    24px 0 #f4e9ff;
+  opacity: 0.82;
 }
 
 .pixel-orbit:hover,
@@ -636,11 +699,9 @@ body.is-pointer-active .site-shell::before {
   --pet-scale: 1.05;
 }
 
-.pixel-orbit:hover .pixel-pet,
-.pixel-orbit.is-pet-close .pixel-pet {
-  filter:
-    drop-shadow(0 0 18px rgba(176, 118, 255, 0.6))
-    drop-shadow(0 24px 30px rgba(0, 0, 0, 0.44));
+.pixel-orbit:hover .pixel-cat,
+.pixel-orbit.is-pet-close .pixel-cat {
+  filter: drop-shadow(0 0 18px rgba(176, 118, 255, 0.95));
   animation: pixel-pet-excited 680ms steps(2, end) infinite;
 }
 
@@ -722,6 +783,19 @@ body.is-pointer-active .site-shell::before {
   }
   50% {
     transform: translate3d(var(--pet-x), calc(var(--pet-y) + var(--pet-hop) - 8px), 0) scale(var(--pet-scale)) rotate(2deg);
+  }
+}
+
+@keyframes pixel-pet-blink {
+  0%,
+  88%,
+  100% {
+    height: 10px;
+    transform: translate3d(var(--eye-x), var(--eye-y), 0);
+  }
+  92% {
+    height: 3px;
+    transform: translate3d(var(--eye-x), calc(var(--eye-y) + 4px), 0);
   }
 }
 
