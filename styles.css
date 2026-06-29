@@ -741,6 +741,7 @@ body.is-pointer-active .site-shell::before {
   min-height: 270px;
   display: grid;
   place-items: center;
+  touch-action: manipulation;
   --pet-x: 0px;
   --pet-y: 0px;
   --pet-hop: 0px;
@@ -939,6 +940,16 @@ body.is-pointer-active .site-shell::before {
   }
   to {
     transform: translateY(-6px);
+  }
+}
+
+@keyframes pixel-pet-mobile {
+  0%,
+  100% {
+    transform: translate3d(0, -2px, 0) scale(0.94) rotate(-1deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) scale(0.98) rotate(2deg);
   }
 }
 
@@ -1568,6 +1579,20 @@ dialog::backdrop {
   .contact-card,
   .product-info {
     transform: none !important;
+  }
+
+  .pixel-orbit {
+    --pet-scale: 0.94;
+    min-height: 250px;
+  }
+
+  .pixel-orbit .pixel-cat {
+    animation: pixel-pet-mobile 2.2s steps(2, end) infinite;
+  }
+
+  .pixel-orbit .star,
+  .pixel-orbit .ring {
+    animation: pixel-orbit-float 1.8s ease-in-out infinite alternate;
   }
 }
 

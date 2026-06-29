@@ -14,6 +14,7 @@ const revealTargets = document.querySelectorAll(
 
 let pointerFrame = 0;
 let scrollFrame = 0;
+let petTapTimer = 0;
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
@@ -52,6 +53,25 @@ window.addEventListener("pointerleave", () => {
   pixelPet?.style.removeProperty("--pet-y");
   pixelPet?.style.removeProperty("--eye-x");
   pixelPet?.style.removeProperty("--eye-y");
+});
+
+pixelPet?.addEventListener("pointerdown", () => {
+  if (window.innerWidth > 840) return;
+
+  window.clearTimeout(petTapTimer);
+  pixelPet.classList.add("is-pet-close");
+  pixelPet.style.setProperty("--pet-x", "0px");
+  pixelPet.style.setProperty("--pet-y", "-6px");
+  pixelPet.style.setProperty("--eye-x", "3px");
+  pixelPet.style.setProperty("--eye-y", "-2px");
+
+  petTapTimer = window.setTimeout(() => {
+    pixelPet.classList.remove("is-pet-close");
+    pixelPet.style.removeProperty("--pet-x");
+    pixelPet.style.removeProperty("--pet-y");
+    pixelPet.style.removeProperty("--eye-x");
+    pixelPet.style.removeProperty("--eye-y");
+  }, 900);
 });
 
 const updateScrollProgress = () => {
