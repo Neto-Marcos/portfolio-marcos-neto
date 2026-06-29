@@ -369,8 +369,13 @@ body.is-pointer-active .site-shell::before {
   width: 1.05em;
   height: 1.05em;
   color: var(--purple-2);
-  fill: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   filter: drop-shadow(0 0 10px rgba(176, 118, 255, 0.72));
+  transform: translateY(0.04em);
 }
 
 .hero-text {
