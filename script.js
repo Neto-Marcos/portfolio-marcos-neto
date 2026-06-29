@@ -5,6 +5,9 @@ const projectDialog = document.querySelector("#projectDialog");
 const projectDialogButton = document.querySelector("[data-open-project]");
 const projectDialogClose = document.querySelector(".dialog-close");
 const pixelPet = document.querySelector(".pixel-orbit");
+const tiltTargets = document.querySelectorAll(
+  ".project-card, .product-media, .product-info, .skill-card, .timeline-card, .contact-form, .contact-card, .personal-card-grid article",
+);
 const revealTargets = document.querySelectorAll(
   ".section-heading, .section-copy, .pixel-orbit, .product-media, .product-info, .project-card, .skill-card, .timeline-item, .contact-form, .contact-card, .site-footer",
 );
@@ -83,6 +86,28 @@ const revealObserver = new IntersectionObserver(
 
 revealTargets.forEach((target) => revealObserver.observe(target));
 updateScrollProgress();
+
+tiltTargets.forEach((target) => {
+  target.addEventListener("pointermove", (event) => {
+    if (window.innerWidth < 841) return;
+
+    const rect = target.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+
+    target.style.setProperty("--card-x", `${event.clientX - rect.left}px`);
+    target.style.setProperty("--card-y", `${event.clientY - rect.top}px`);
+    target.style.setProperty("--tilt-x", `${clamp(x * 3.2, -3.2, 3.2)}deg`);
+    target.style.setProperty("--tilt-y", `${clamp(y * -3.2, -3.2, 3.2)}deg`);
+  });
+
+  target.addEventListener("pointerleave", () => {
+    target.style.removeProperty("--card-x");
+    target.style.removeProperty("--card-y");
+    target.style.removeProperty("--tilt-x");
+    target.style.removeProperty("--tilt-y");
+  });
+});
 
 menuButton?.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("is-open");
