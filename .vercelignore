@@ -1,0 +1,7 @@
+.git
+.vercel
+.env*
+README.md
+scripts
+assets/logo.svg
+assets/social-card.jpg

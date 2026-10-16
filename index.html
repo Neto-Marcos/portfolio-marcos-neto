@@ -3,27 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#003152" />
+    <meta name="theme-color" content="#0d0817" />
     <meta name="color-scheme" content="dark" />
-    <meta name="description" content="Portfólio de Marcos Neto — estudante de Ciência da Computação na UNIFACISA e desenvolvedor back-end focado em sistemas web, automação e operações reais." />
+    <meta name="description" content="Portfólio de Marcos Neto, desenvolvedor back-end focado em Java, APIs e produtos digitais aplicados a operações reais." />
+    <meta name="author" content="Marcos Neto" />
+    <link rel="canonical" href="https://portfolio-marcos-neto.vercel.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Marcos Neto — Back-end que entrega produto" />
-    <meta property="og:description" content="Sistemas web para transformar operações reais em fluxos mais seguros, rastreáveis e eficientes." />
+    <meta property="og:title" content="Marcos Neto — Desenvolvedor back-end e produtos digitais" />
+    <meta property="og:description" content="Sistemas web que transformam operações complexas em produtos simples, rastreáveis e úteis." />
     <meta property="og:url" content="https://portfolio-marcos-neto.vercel.app/" />
-    <meta property="og:image" content="https://portfolio-marcos-neto.vercel.app/assets/social-card.jpg" />
-    <meta property="og:image:alt" content="Marcos Neto — back-end que entrega produto" />
+    <meta property="og:image" content="https://portfolio-marcos-neto.vercel.app/assets/social-card-purple.png" />
+    <meta property="og:image:width" content="1731" />
+    <meta property="og:image:height" content="909" />
+    <meta property="og:image:alt" content="Marcos Neto — desenvolvedor back-end e produtos digitais" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Marcos Neto — Back-end que entrega produto" />
-    <meta name="twitter:description" content="Sistemas web, automação e tecnologia aplicada a operações reais." />
-    <meta name="twitter:image" content="https://portfolio-marcos-neto.vercel.app/assets/social-card.jpg" />
+    <meta name="twitter:title" content="Marcos Neto — Desenvolvedor back-end" />
+    <meta name="twitter:description" content="Java, APIs e produtos digitais aplicados a operações reais." />
+    <meta name="twitter:image" content="https://portfolio-marcos-neto.vercel.app/assets/social-card-purple.png" />
     <title>Marcos Neto — Desenvolvedor Back-end</title>
     <link rel="manifest" href="site.webmanifest" />
-    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/marcos-pixel-avatar.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="editorial.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marcos Neto",
+        "url": "https://portfolio-marcos-neto.vercel.app/",
+        "image": "https://portfolio-marcos-neto.vercel.app/assets/marcos-github-avatar.jpg",
+        "jobTitle": "Desenvolvedor Back-end",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "UNIFACISA" },
+        "knowsAbout": ["Java", "Python", "JavaScript", "TypeScript", "SQL", "HTML", "CSS", "Spring Boot", "Django", "APIs REST", "PostgreSQL", "React", "Next.js", "Sistemas web"],
+        "sameAs": [
+          "https://github.com/Neto-Marcos",
+          "https://www.linkedin.com/in/marcos-neto-bbab573b6/",
+          "https://www.instagram.com/marcosneto.dev/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -34,184 +57,230 @@
     <header class="topbar">
       <a class="brand" href="#inicio" aria-label="Marcos Neto — início">
         <span class="brand-mark">MN</span>
-        <span>marcosneto.dev</span>
+        <span class="brand-name">Marcos Neto</span>
       </a>
-      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav-links" aria-label="Navegação principal">
+      <nav class="nav-links" id="menu-principal" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
+        <a href="#projetos">Cases</a>
         <a href="#stack">Stack</a>
         <a href="#contato">Contato</a>
       </nav>
-      <a class="topbar-cta" href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">Vamos conversar <span>↗</span></a>
+      <a class="topbar-cta" href="assets/marcos-neto-curriculo.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
     </header>
 
     <main id="conteudo">
-      <section class="hero section" id="inicio">
+      <section class="hero section" id="inicio" data-section>
         <div class="hero-copy reveal">
-          <div class="availability"><span></span> Aberto a oportunidades e novos projetos</div>
-          <p class="kicker">Back-end · Sistemas web · Automação</p>
-          <h1>Eu transformo problemas operacionais em <em>produtos que funcionam.</em></h1>
-          <p class="hero-lead">Sou Marcos Neto, estudante de Ciência da Computação na UNIFACISA. Desenvolvo sistemas com back-end bem estruturado, interfaces claras e foco em resolver problemas reais.</p>
+          <div class="availability"><span></span> Disponível para oportunidades</div>
+          <p class="kicker">Desenvolvedor back-end Java</p>
+          <h1>MARCOS <em>NETO.</em></h1>
+          <p class="hero-lead">Buscando estágio ou vaga júnior em desenvolvimento back-end. Estudante de Ciência da Computação na UNIFACISA, construindo APIs e sistemas para operações reais.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projetos">Conhecer projetos <span>↓</span></a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+            <a class="button button-primary" href="#projetos">Ver cases <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="assets/marcos-neto-curriculo.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
           </div>
+          <div class="hero-socials"><a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           <ul class="hero-facts" aria-label="Resumo profissional">
-            <li><strong>02</strong><span>produtos<br />publicados</span></li>
+            <li><strong>03</strong><span>projetos<br />aplicados</span></li>
+            <li><strong>02</strong><span>produtos em<br />produção</span></li>
             <li><strong>CC</strong><span>Ciência da Computação<br />UNIFACISA</span></li>
-            <li><strong>Full</strong><span>back-end primeiro,<br />produto completo</span></li>
           </ul>
         </div>
 
         <div class="hero-visual reveal reveal-delay-1">
           <div class="portrait-frame">
             <div class="portrait-grid" aria-hidden="true"></div>
-            <img class="portrait" src="assets/marcos-github-avatar.jpg" alt="Retrato de Marcos Neto" width="460" height="460" />
-            <span class="portrait-label">Marcos Neto // dev</span>
+            <img class="portrait" src="assets/marcos-portrait.webp" alt="Marcos Neto de braços cruzados" width="800" height="1200" fetchpriority="high" />
+            <span class="portrait-label">Marcos Neto // back-end</span>
           </div>
-          <div class="avatar-card">
-            <img src="assets/marcos-pixel-avatar.webp" alt="Avatar em pixel art de Marcos Neto" width="128" height="128" />
-            <div><span>status</span><strong>building...</strong></div>
-          </div>
-          <div class="code-note" aria-hidden="true"><span>01</span> pensar<br /><span>02</span> modelar<br /><span>03</span> construir</div>
+          <a class="hero-project-preview" href="#criar-rota"><img src="assets/criar-rota-public.png" alt="" width="1440" height="960" /><span>Projeto em destaque <strong>Criar Rota ↗</strong></span></a>
         </div>
       </section>
 
-      <section class="about section" id="sobre">
-        <div class="section-label reveal"><span>01</span> Sobre mim</div>
+      <div class="capabilities" aria-label="Tecnologias principais">
+        <div><span>Java 21</span><i></i><span>Spring Boot</span><i></i><span>PostgreSQL</span><i></i><span>Django</span><i></i><span>React</span><i></i><span>Docker</span></div>
+      </div>
+
+      <section class="about section" id="sobre" data-section>
+        <div class="section-label reveal"><span>01</span> Perfil</div>
         <div class="about-grid">
           <div class="about-heading reveal">
-            <h2>Não estudo tecnologia só na teoria. <em>Eu construo com ela.</em></h2>
+            <p class="eyebrow">Tecnologia aplicada</p>
+            <h2>Back-end primeiro. <em>Produto completo.</em></h2>
           </div>
           <div class="about-copy reveal reveal-delay-1">
-            <p>Minha especialidade é back-end, mas gosto de acompanhar o produto inteiro: da compreensão da operação até a interface que alguém realmente vai usar.</p>
-            <p>Atualmente curso Ciência da Computação na UNIFACISA e direciono meus estudos para Java, APIs, bancos de dados, automação e sistemas aplicados à logística.</p>
+            <p class="about-lead">Minha especialidade é transformar regras de negócio, documentos e rotinas operacionais em fluxos digitais seguros e fáceis de evoluir.</p>
+            <p>Atualmente curso Ciência da Computação na UNIFACISA e concentro meus estudos em Java, APIs, bancos de dados, automação e aplicações web para logística e gestão.</p>
+            <dl class="profile-facts"><div><dt>Formação</dt><dd>Ciência da Computação · UNIFACISA<br />Graduação em andamento</dd></div><div><dt>Objetivo</dt><dd>Estágio ou posição júnior em back-end</dd></div><div><dt>Também disponível para</dt><dd>Projetos freelance de APIs, automações e sistemas web</dd></div></dl>
             <div class="principles">
-              <article><span>01</span><strong>Problema antes da tecnologia</strong><p>Entender a rotina vem antes de escolher ferramentas.</p></article>
-              <article><span>02</span><strong>Regra de negócio explícita</strong><p>Fluxos claros tornam sistemas mais seguros e fáceis de evoluir.</p></article>
-              <article><span>03</span><strong>Entrega de ponta a ponta</strong><p>Do banco de dados até a experiência de quem opera.</p></article>
+              <article><span>01</span><strong>Problema antes da tecnologia</strong><p>Mapeio pessoas, etapas e exceções antes de escolher ferramentas.</p></article>
+              <article><span>02</span><strong>Regra de negócio explícita</strong><p>Estados e validações claros tornam o sistema mais confiável.</p></article>
+              <article><span>03</span><strong>Entrega de ponta a ponta</strong><p>Do banco de dados à experiência de quem opera o produto.</p></article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="projects section" id="projetos">
-        <div class="section-label reveal"><span>02</span> Trabalho selecionado</div>
+      <section class="projects section" id="projetos" data-section>
+        <div class="section-label reveal"><span>02</span> Cases selecionados</div>
         <div class="section-intro reveal">
-          <h2>Produtos reais, não apenas exercícios.</h2>
-          <p>Projetos criados para organizar operações, reduzir erros e dar visibilidade a processos importantes.</p>
+          <h2>O que eu <em>construí.</em></h2>
+          <p>Conheça os sistemas, explore as demonstrações e veja as decisões técnicas que tomei em cada projeto.</p>
         </div>
 
-        <article class="case-study featured reveal">
+        <article class="case-study reveal" id="criar-rota">
           <div class="case-visual">
-            <img src="assets/mn-check-dashboard.png" alt="Dashboard operacional do MN Check" loading="lazy" />
+            <div class="project-gallery" role="region" aria-roledescription="carrossel" aria-label="Imagens do Criar Rota">
+              <div class="gallery-track" tabindex="0" aria-label="Imagens; use as setas para navegar">
+                <a href="assets/criar-rota-dashboard-tratado.webp" class="gallery-slide"><img src="assets/criar-rota-dashboard-tratado.webp" alt="Criar Rota — dashboard com dados comerciais ocultos" width="1800" height="876" loading="lazy" /></a>
+                <a href="assets/criar-rota-rastreio-tratado.webp" class="gallery-slide"><img src="assets/criar-rota-rastreio-tratado.webp" alt="Criar Rota — mapa de rastreio com identificadores substituídos" width="1800" height="876" loading="lazy" /></a>
+                <a href="assets/criar-rota-planejador-tratado.webp" class="gallery-slide"><img src="assets/criar-rota-planejador-tratado.webp" alt="Criar Rota — planejador com identificação da empresa substituída" width="1800" height="876" loading="lazy" /></a>
+              </div>
+              <div class="gallery-controls" hidden><button type="button" data-gallery-prev aria-label="Imagem anterior">←</button><span class="gallery-position" aria-live="polite" aria-atomic="true"></span><button type="button" data-gallery-next aria-label="Próxima imagem">→</button><button type="button" data-gallery-zoom>Ampliar ↗</button></div>
+            </div>
             <span class="case-index">01 / destaque</span>
           </div>
           <div class="case-content">
-            <div class="case-meta"><span>Sistema logístico</span><span>Em produção</span></div>
+            <div class="case-meta"><span>Planejamento de entregas</span><span>Aplicação web / PWA</span></div>
+            <h3>Criar Rota</h3>
+            <p class="case-summary">Da carteira de pedidos ao retorno do caminhão: planejamento e acompanhamento de entregas em um só lugar.</p>
+            <div class="case-impact"><article><small>Problema</small><p>Transformar pedidos em cargas e rotas exige trabalho manual, enquanto entregas, ocorrências e comprovantes ficam dispersos entre escritório e motoristas.</p></article><article><small>Solução</small><p>Importação de pedidos, verificação de disponibilidade em estoque e sugestões de cargas e rotas por cidades, peso e cubagem. Centraliza o acompanhamento da viagem, mantendo a revisão e as decisões com a equipe.</p></article></div>
+            <ul class="tech-list" aria-label="Tecnologias do Criar Rota"><li>Next.js</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>Leaflet</li><li>PWA</li></ul>
+            <details class="case-details"><summary>Fluxo e decisões do produto <span aria-hidden="true">+</span></summary><div class="details-grid"><p><strong>Planejamento e expedição</strong>Importação de planilhas, revisão de sugestões, sequência de carregamento e romaneios com números dos pedidos.</p><p><strong>Motorista</strong>Navegação, entregas, ocorrências, fotos, comprovantes e odômetros até o retorno do caminhão.</p><p><strong>Escritório</strong>Consulta de posições GPS transmitidas, comprovantes, comunicação e solicitações de pagamento conforme o perfil de acesso.</p><p><strong>Limites e evolução</strong>O saldo vem da planilha, não de uma reserva em tempo real. O novo painel comercial está em desenvolvimento; integração automática com ERP e rastreadores físicos são possibilidades futuras.</p></div></details>
+            <div class="case-actions"><a class="button button-primary" href="https://criarrota.up.railway.app" target="_blank" rel="noreferrer">Conhecer o sistema ↗</a></div>
+            <p class="demo-note">Imagens editadas para apresentação: dados comerciais ocultos e identificadores substituídos.</p>
+          </div>
+        </article>
+
+        <article class="case-study reveal" id="mn-check">
+          <div class="case-visual case-visual-mn">
+            <div class="project-gallery" role="region" aria-roledescription="carrossel" aria-label="Imagens do MN Check">
+              <div class="gallery-track" tabindex="0" aria-label="Imagens; use as setas para navegar">
+                <a href="assets/mn-check-dashboard-atual.webp" class="gallery-slide"><img src="assets/mn-check-dashboard-atual.webp" alt="MN Check — visão geral e indicadores operacionais" width="1918" height="933" loading="lazy" /></a>
+                <a href="assets/mn-check-inventarios-editado.webp" class="gallery-slide"><img src="assets/mn-check-inventarios-editado.webp" alt="MN Check — inventários e contagem; títulos editados para apresentação" width="1800" height="874" loading="lazy" /></a>
+              </div>
+              <div class="gallery-controls" hidden><button type="button" data-gallery-prev aria-label="Imagem anterior">←</button><span class="gallery-position" aria-live="polite" aria-atomic="true"></span><button type="button" data-gallery-next aria-label="Próxima imagem">→</button><button type="button" data-gallery-zoom>Ampliar ↗</button></div>
+            </div>
+            <span class="case-index">02 / logística</span>
+            <span class="visual-caption">Visão geral e inventários · clique nas imagens para ampliar.</span>
+          </div>
+          <div class="case-content">
+            <div class="case-meta"><span>Sistema logístico</span><span class="status-live">Em produção</span><span>v3.0.0</span></div>
             <h3>MN Check</h3>
-            <p class="case-summary">Sistema para separação, conferência de expedição e contagem de estoque, criado para reduzir erros em SKU, cor, voltagem, quantidade e saldo.</p>
+            <p class="case-summary">Sistema para mapas de carga, separação por coletor, conferência de expedição e contagem de estoque em um fluxo logístico real.</p>
             <div class="case-impact">
-              <article><small>Problema</small><p>Processos manuais com pouca rastreabilidade e alta exposição a divergências.</p></article>
-              <article><small>Solução</small><p>Fluxo integrado de mapas, leitura por coletor, dupla conferência e histórico auditável.</p></article>
+              <article><small>Problema</small><p>Separação e conferência de cargas feitas manualmente dificultam a identificação de divergências e o acompanhamento da operação.</p></article>
+              <article><small>Solução</small><p>Leitura por coletor, validação de produtos e dupla conferência em um fluxo integrado, com registro de divergências e histórico rastreável.</p></article>
+            </div>
+            <div class="architecture" aria-label="Arquitetura resumida do MN Check">
+              <span>Coletor / Web</span><b>→</b><span>Spring Boot API</span><b>→</b><span>PostgreSQL</span>
             </div>
             <ul class="tech-list" aria-label="Tecnologias do MN Check">
               <li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>PDFBox</li><li>React</li><li>Docker</li>
             </ul>
             <details class="case-details">
-              <summary>Ver detalhes técnicos <span>+</span></summary>
+              <summary>Decisões e participação <span aria-hidden="true">+</span></summary>
               <div class="details-grid">
-                <p><strong>Minha participação</strong>Desenvolvimento full-stack do fluxo operacional, API, persistência, leitura de documentos, validação de códigos, interface, testes e publicação.</p>
-                <p><strong>Desafio</strong>Converter PDFs e imagens variados em mapas revisáveis, combinando IA com validações determinísticas e rastreabilidade entre etapas.</p>
+                <p><strong>Minha participação</strong>Desenvolvimento full-stack da API, persistência, validação de códigos, leitura de documentos, interface, testes e publicação.</p>
+                <p><strong>Decisão técnica</strong>Combinar leitura assistida por IA com revisão humana e validações determinísticas antes de persistir os mapas.</p>
+                <p><strong>Fluxo</strong>Upload do mapa, rascunho editável, separação por coletor, conferência independente e registro de divergências.</p>
+                <p><strong>Qualidade</strong>Testes para parser de PDF, normalização de SKU, código de barras e persistência.</p>
               </div>
             </details>
             <div class="case-actions">
-              <a class="button button-primary" href="https://mn-check-production.up.railway.app/" target="_blank" rel="noreferrer">Abrir aplicação <span>↗</span></a>
-              <a class="text-link" href="https://github.com/Neto-Marcos/mn-check" target="_blank" rel="noreferrer">Ver código no GitHub ↗</a>
+              <a class="button button-primary" href="https://mn-check-production.up.railway.app/" target="_blank" rel="noreferrer">Abrir aplicação <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="demo-note">A aplicação exige login. Explore as imagens para conhecer o projeto.</p>
+          </div>
+        </article>
+
+        <article class="case-study case-reverse reveal" id="chronos">
+          <div class="case-visual case-visual-chronos">
+            <div class="project-gallery" role="region" aria-roledescription="carrossel" aria-label="Imagens do Chronos">
+              <div class="gallery-track" tabindex="0" aria-label="Imagens; use as setas para navegar">
+                <a href="assets/chronos-dashboard-anonimizado.webp" class="gallery-slide"><img src="assets/chronos-dashboard-anonimizado.webp" alt="Chronos — dashboard de jornada; nomes substituídos para apresentação" width="1800" height="876" loading="lazy" /></a>
+                <a href="assets/chronos-atividade-anonimizada.webp" class="gallery-slide"><img src="assets/chronos-atividade-anonimizada.webp" alt="Chronos — atividades, alertas e gráficos; nomes substituídos para apresentação" width="1800" height="876" loading="lazy" /></a>
+                <a href="assets/chronos-public.png" class="gallery-slide"><img src="assets/chronos-public.png" alt="Chronos — site público de apresentação do produto" width="1440" height="960" loading="lazy" /></a>
+              </div>
+              <div class="gallery-controls" hidden><button type="button" data-gallery-prev aria-label="Imagem anterior">←</button><span class="gallery-position" aria-live="polite" aria-atomic="true"></span><button type="button" data-gallery-next aria-label="Próxima imagem">→</button><button type="button" data-gallery-zoom>Ampliar ↗</button></div>
+            </div>
+            <div class="product-surfaces" aria-label="Superfícies do produto Chronos">
+              <span>Painel React</span><span>Tablet PWA</span><span>Mobile</span><span>Landing page</span>
+            </div>
+            <span class="case-index">03 / SaaS</span>
+          </div>
+          <div class="case-content">
+            <div class="case-meta"><span>Plataforma SaaS</span><span class="status-live">Em produção</span><span>Multiempresa</span></div>
+            <h3>Chronos</h3>
+            <p class="case-summary">Ecossistema de gestão de jornada com painel administrativo, registro de ponto por reconhecimento facial e operação offline em tablets.</p>
+            <div class="case-impact">
+              <article><small>Problema</small><p>Registros de ponto dispersos e ajustes manuais dificultam o controle de jornadas, escalas e banco de horas.</p></article>
+              <article><small>Solução</small><p>Gestão de jornada centralizada, com registro por reconhecimento facial, painel administrativo e operação offline em tablets, com sincronização posterior.</p></article>
+            </div>
+            <div class="architecture" aria-label="Arquitetura resumida do Chronos">
+              <span>PWAs / React</span><b>→</b><span>Django REST</span><b>→</b><span>PostgreSQL</span>
+            </div>
+            <ul class="tech-list" aria-label="Tecnologias do Chronos">
+              <li>Django REST</li><li>Python</li><li>React</li><li>TypeScript</li><li>PWA</li><li>PostgreSQL</li>
+            </ul>
+            <details class="case-details">
+              <summary>Decisões e participação <span aria-hidden="true">+</span></summary>
+              <div class="details-grid">
+                <p><strong>Escopo</strong>Back-end, painel administrativo, PWA de tablet, experiência móvel e landing page comercial.</p>
+                <p><strong>Offline first</strong>Registros podem entrar em fila local no tablet e sincronizar quando a conexão retorna.</p>
+                <p><strong>Segurança</strong>Dados isolados por empresa, perfis de acesso, dispositivos autorizados e trilha de auditoria.</p>
+                <p><strong>Comunicação</strong>Landing page com planos, FAQ, SEO, conversão pelo WhatsApp e páginas de privacidade.</p>
+              </div>
+            </details>
+            <div class="case-actions">
+              <a class="button button-primary" href="https://chronos-site-tau.vercel.app/" target="_blank" rel="noreferrer">Conhecer o produto <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://admin-panel-production-7c1d.up.railway.app/" target="_blank" rel="noreferrer">Abrir painel ↗</a>
             </div>
           </div>
         </article>
 
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-window journey-window" aria-hidden="true">
-              <div class="window-bar"><i></i><i></i><i></i><span>gestao-de-jornada / dashboard</span></div>
-              <div class="journey-ui">
-                <aside><b></b><span></span><span></span><span></span><span></span></aside>
-                <div><div class="ui-title"></div><div class="ui-stats"><i></i><i></i><i></i></div><div class="ui-chart"></div></div>
-              </div>
-            </div>
-            <div class="project-copy">
-              <div class="case-meta"><span>Sistema B2B</span><span>Multiempresa</span></div>
-              <h3>Gestão de Jornada</h3>
-              <p>Painel administrativo para organizar estrutura empresarial, escalas, funcionários, registros de ponto, ajustes e banco de horas.</p>
-              <ul class="tech-list"><li>React</li><li>Vite</li><li>Tailwind</li><li>API REST</li><li>JWT</li></ul>
-              <details class="case-details compact-details">
-                <summary>O que torna o projeto especial <span>+</span></summary>
-                <p>Isolamento de dados por empresa, diferentes perfis de acesso, reconhecimento facial, sincronização offline de tablets e auditoria de ajustes.</p>
-              </details>
-              <a class="text-link" href="https://admin-panel-production-7c1d.up.railway.app/" target="_blank" rel="noreferrer">Abrir aplicação ↗</a>
-            </div>
-          </article>
 
-          <article class="project-card reveal reveal-delay-1">
-            <div class="project-window journey-window" aria-hidden="true">
-              <div class="window-bar"><i></i><i></i><i></i><span>chronos / landing-page</span></div>
-              <div class="journey-ui">
-                <aside><b></b><span></span><span></span><span></span><span></span></aside>
-                <div><div class="ui-title"></div><div class="ui-stats"><i></i><i></i><i></i></div><div class="ui-chart"></div></div>
-              </div>
-            </div>
-            <div class="project-copy">
-              <div class="case-meta"><span>Landing page B2B</span><span>Em produção</span></div>
-              <h3>Chronos</h3>
-              <p>Site comercial para uma plataforma de gestão de jornada com reconhecimento facial, operação offline, banco de horas e estrutura multiempresa.</p>
-              <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SEO</li><li>Vercel</li></ul>
-              <details class="case-details compact-details">
-                <summary>O que torna o projeto especial <span>+</span></summary>
-                <p>Comunicação comercial completa, planos, FAQ, acessibilidade, páginas de privacidade e biometria, dados estruturados e conversão pelo WhatsApp.</p>
-              </details>
-              <a class="text-link" href="https://chronos-site-tau.vercel.app/" target="_blank" rel="noreferrer">Abrir landing page ↗</a>
-            </div>
-          </article>
+      </section>
+
+      <section class="skills section" id="stack" data-section>
+        <div class="section-label reveal"><span>03</span> Stack com propósito</div>
+        <div class="skills-heading reveal">
+          <h2>Ferramentas ligadas ao que <em>eu entrego.</em></h2>
+          <p>Mais do que listar tecnologias, estas são as responsabilidades que assumo ao construir um produto.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><span class="skill-number">01</span><h3>Regras e APIs</h3><p>Serviços, autenticação, validações e integrações orientadas à operação.</p><div><span><img src="assets/tech-icons/openjdk.svg" alt="" width="16" height="16" loading="lazy" />Java</span><span><img src="assets/tech-icons/python.svg" alt="" width="16" height="16" loading="lazy" />Python</span><span><img src="assets/tech-icons/springboot.svg" alt="" width="16" height="16" loading="lazy" />Spring Boot</span><span><img src="assets/tech-icons/django.svg" alt="" width="16" height="16" loading="lazy" />Django</span><span><img src="assets/tech-icons/api.svg" alt="" width="16" height="16" loading="lazy" />REST</span><span><img src="assets/tech-icons/jsonwebtokens.svg" alt="" width="16" height="16" loading="lazy" />JWT</span></div></article>
+          <article class="skill-card reveal reveal-delay-1"><span class="skill-number">02</span><h3>Dados rastreáveis</h3><p>Modelagem, persistência, histórico e isolamento seguro por contexto.</p><div><span><img src="assets/tech-icons/postgresql.svg" alt="" width="16" height="16" loading="lazy" />PostgreSQL</span><span><img src="assets/tech-icons/neon.svg" alt="" width="16" height="16" loading="lazy" />Neon</span><span><img src="assets/tech-icons/database.svg" alt="" width="16" height="16" loading="lazy" />SQL</span><span><img src="assets/tech-icons/document.svg" alt="" width="16" height="16" loading="lazy" />Auditoria</span></div></article>
+          <article class="skill-card reveal reveal-delay-2"><span class="skill-number">03</span><h3>Interfaces de produto</h3><p>Experiências responsivas para desktop, tablet e operação móvel.</p><div><span><img src="assets/tech-icons/react.svg" alt="" width="16" height="16" loading="lazy" />React</span><span><img src="assets/tech-icons/nextdotjs.svg" alt="" width="16" height="16" loading="lazy" />Next.js</span><span><img src="assets/tech-icons/typescript.svg" alt="" width="16" height="16" loading="lazy" />TypeScript</span><span><img src="assets/tech-icons/javascript.svg" alt="" width="16" height="16" loading="lazy" />JavaScript</span><span><img src="assets/tech-icons/html5.svg" alt="" width="16" height="16" loading="lazy" />HTML</span><span><img src="assets/tech-icons/css.svg" alt="" width="16" height="16" loading="lazy" />CSS</span><span><img src="assets/tech-icons/pwa.svg" alt="" width="16" height="16" loading="lazy" />PWA</span></div></article>
+          <article class="skill-card reveal reveal-delay-3"><span class="skill-number">04</span><h3>Entrega e automação</h3><p>Documentos, containers, versionamento e publicação contínua.</p><div><span><img src="assets/tech-icons/python.svg" alt="" width="16" height="16" loading="lazy" />Python</span><span><img src="assets/tech-icons/document.svg" alt="" width="16" height="16" loading="lazy" />PDFBox</span><span><img src="assets/tech-icons/docker.svg" alt="" width="16" height="16" loading="lazy" />Docker</span><span><img src="assets/tech-icons/git.svg" alt="" width="16" height="16" loading="lazy" />Git</span><span><img src="assets/tech-icons/railway.svg" alt="" width="16" height="16" loading="lazy" />Railway</span><span><img src="assets/tech-icons/vercel.svg" alt="" width="16" height="16" loading="lazy" />Vercel</span></div></article>
         </div>
       </section>
 
       <section class="process section" id="processo">
-        <div class="section-label reveal"><span>03</span> Como eu construo</div>
+        <div class="section-label reveal"><span>04</span> Processo</div>
         <div class="process-layout">
-          <div class="process-intro reveal"><h2>Do problema ao sistema.</h2><p>Uma abordagem simples para transformar rotinas complexas em software utilizável.</p></div>
+          <div class="process-intro reveal"><h2>Do problema ao <em>sistema.</em></h2><p>Uma abordagem simples para reduzir incerteza antes de escrever código e validar o produto com situações reais.</p></div>
           <ol class="process-list">
-            <li class="reveal"><span>01</span><div><strong>Entender a operação</strong><p>Mapear pessoas, etapas, exceções e o resultado esperado.</p></div></li>
-            <li class="reveal"><span>02</span><div><strong>Modelar regras e dados</strong><p>Organizar entidades, estados, validações e responsabilidades.</p></div></li>
-            <li class="reveal"><span>03</span><div><strong>Construir o fluxo completo</strong><p>Integrar back-end, dados e uma interface clara para a rotina.</p></div></li>
-            <li class="reveal"><span>04</span><div><strong>Validar e evoluir</strong><p>Testar casos reais, corrigir arestas e preparar o próximo ciclo.</p></div></li>
+            <li class="reveal"><span>01</span><div><strong>Entender a operação</strong><p>Pessoas, etapas, exceções e resultado esperado.</p></div></li>
+            <li class="reveal"><span>02</span><div><strong>Modelar regras e dados</strong><p>Entidades, estados, permissões e validações.</p></div></li>
+            <li class="reveal"><span>03</span><div><strong>Construir o fluxo completo</strong><p>Back-end, dados e interface funcionando como produto.</p></div></li>
+            <li class="reveal"><span>04</span><div><strong>Validar e evoluir</strong><p>Casos reais, testes proporcionais ao risco e ciclos curtos.</p></div></li>
           </ol>
         </div>
       </section>
 
-      <section class="skills section" id="stack">
-        <div class="section-label reveal"><span>04</span> Stack e competências</div>
-        <div class="skills-grid">
-          <article class="skill-card reveal"><span class="skill-number">01</span><h3>Back-end</h3><p>Regras de negócio, serviços e integrações.</p><div><span>Java</span><span>Spring Boot</span><span>JDBC</span><span>APIs REST</span></div></article>
-          <article class="skill-card reveal reveal-delay-1"><span class="skill-number">02</span><h3>Dados</h3><p>Persistência, modelagem e histórico.</p><div><span>PostgreSQL</span><span>Neon</span><span>SQL</span><span>Modelagem</span></div></article>
-          <article class="skill-card reveal reveal-delay-2"><span class="skill-number">03</span><h3>Front-end</h3><p>Interfaces responsivas para produtos completos.</p><div><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div></article>
-          <article class="skill-card reveal reveal-delay-3"><span class="skill-number">04</span><h3>Ferramentas</h3><p>Automação, documentos e entrega.</p><div><span>Python</span><span>PDFBox</span><span>Docker</span><span>Git</span><span>Railway</span></div></article>
-        </div>
-      </section>
-
-      <section class="contact section" id="contato">
+      <section class="contact section" id="contato" data-section>
         <div class="contact-panel reveal">
-          <p class="kicker">Tem uma oportunidade ou um problema para resolver?</p>
+          <p class="kicker">Aberto a estágio, posição júnior e projetos freelance</p>
           <h2>Vamos construir algo <em>útil de verdade.</em></h2>
-          <p>Estou aberto a vagas, projetos freelance e conversas com pessoas que valorizam tecnologia aplicada a problemas reais.</p>
+          <p>Se existe uma operação para organizar, uma API para estruturar ou um produto para tirar do papel, vamos conversar.</p>
           <div class="contact-actions">
-            <a class="contact-primary" href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer"><small>Conversa profissional</small><strong>LinkedIn</strong><span>↗</span></a>
-            <a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer"><small>Projetos e código</small><strong>GitHub</strong><span>↗</span></a>
-            <a href="https://www.instagram.com/marcosneto.dev/" target="_blank" rel="noreferrer"><small>Conteúdo e novidades</small><strong>Instagram</strong><span>↗</span></a>
+            <a class="contact-primary" href="https://wa.me/5583991744139?text=Ol%C3%A1%2C%20Marcos!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" rel="noreferrer"><small>Conversa rápida</small><strong>WhatsApp</strong><span aria-hidden="true">↗</span></a>
+            <a href="mailto:marcos.neto0706@gmail.com"><small>Proposta ou oportunidade</small><strong>E-mail</strong><span aria-hidden="true">↗</span></a>
+            <a href="assets/marcos-neto-curriculo.pdf" download><small>Experiência e competências</small><strong>Currículo PDF</strong><span aria-hidden="true">↓</span></a>
           </div>
         </div>
       </section>
@@ -220,7 +289,7 @@
     <footer class="footer">
       <a class="brand" href="#inicio"><span class="brand-mark">MN</span><span>marcosneto.dev</span></a>
       <p>Back-end que entrega produto.</p>
-      <div><a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.instagram.com/marcosneto.dev/" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+      <div><a href="https://github.com/Neto-Marcos" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/marcos-neto-bbab573b6/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:marcos.neto0706@gmail.com">E-mail</a></div>
       <span>© <span data-year></span> Marcos Neto</span>
     </footer>
 

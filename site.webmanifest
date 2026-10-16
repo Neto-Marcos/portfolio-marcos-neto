@@ -3,13 +3,14 @@
   "short_name": "Marcos Neto",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#003152",
-  "theme_color": "#003152",
+  "background_color": "#0d0817",
+  "theme_color": "#0d0817",
   "icons": [
     {
-      "src": "./assets/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "./assets/marcos-pixel-avatar.webp",
+      "sizes": "1254x1254",
+      "type": "image/webp",
+      "purpose": "any"
     }
   ]
 }
