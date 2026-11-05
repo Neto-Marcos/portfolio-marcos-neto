@@ -213,3 +213,15 @@ p,dd { text-wrap:pretty; }
 @media(prefers-reduced-motion:reduce) {
  .button:active,.topbar-cta:active,.button:hover,.topbar-cta:hover,.contact-actions a:hover { transform:none; }
 }
+
+/* Agents (agents.js): labelled cursors that assemble each block as the page scrolls. */
+.agent-layer { position:absolute; z-index:75; top:0; left:0; width:100%; overflow:clip; pointer-events:none; }
+.agent-slot,.agent-box,.agent-cursor { position:absolute; top:0; left:0; opacity:0; will-change:transform,opacity; }
+.agent-slot { border:1.5px dashed color-mix(in srgb,var(--agent) 55%,transparent); border-radius:12px; background:color-mix(in srgb,var(--agent) 4%,transparent); }
+.agent-box { border:1.5px solid var(--agent); border-radius:4px; background:linear-gradient(var(--agent),var(--agent)) top left/8px 8px no-repeat,linear-gradient(var(--agent),var(--agent)) top right/8px 8px no-repeat,linear-gradient(var(--agent),var(--agent)) bottom left/8px 8px no-repeat,linear-gradient(var(--agent),var(--agent)) bottom right/8px 8px no-repeat; }
+.agent-cursor { display:flex; align-items:flex-start; }
+.agent-cursor svg { width:22px; height:22px; fill:var(--agent); stroke:#fff; stroke-width:1.4; stroke-linejoin:round; filter:drop-shadow(0 3px 6px #0008); transform-origin:4px 2px; scale:calc(1 - var(--press,0) * .16); }
+.agent-cursor span { margin:16px 0 0 -4px; padding:3px 8px; border-radius:2px 8px 8px 8px; background:var(--agent); color:#170c24; font:700 11px/1.4 var(--sans); white-space:nowrap; box-shadow:0 4px 12px #0006; }
+.agent-cursor i { position:absolute; left:-10px; top:-12px; width:28px; height:28px; border:2px solid var(--agent); border-radius:50%; opacity:var(--ring-o,0); scale:var(--ring-s,.3); }
+@media(max-width:520px) { .agent-cursor span { font-size:10px; padding:2px 6px; } }
+@media print { .agent-layer { display:none; } }

@@ -17,4 +17,5 @@ Portfólio profissional de **Marcos Neto**, desenvolvedor back-end com foco em J
 ## 🛠️ Tecnologias do site
 
 - **HTML5**, **CSS3** (`styles.css` + sistema editorial `editorial.css`) e **JavaScript** puro, sem dependências externas ou etapa de build.
+- `agents.js`: cursores com nome ("Marcos", "API", "Banco", "Interface", "Deploy") montam cada bloco conforme a rolagem. É desligado com `prefers-reduced-motion`, e o conteúdo continua legível sem JavaScript.
 - Otimizado para SEO, acessibilidade (WCAG), dados estruturados (`Schema.org/Person`) e hospedado na **Vercel**.
